@@ -1,10 +1,14 @@
 // ignore_for_file: prefer_single_quotes
-class Assets {
-  Assets._();
+class AppIcons {
+  AppIcons._();
   
   /// Assets for iconsAppIcon
   /// assets/icons/app_icon.svg
   static const String iconsAppIcon = "assets/icons/app_icon.svg";
+
+  /// Assets for iconsAppLogo
+  /// assets/icons/app_logo.svg
+  static const String iconsAppLogo = "assets/icons/app_logo.svg";
 
   /// Assets for iconsGoogle
   /// assets/icons/google.svg
