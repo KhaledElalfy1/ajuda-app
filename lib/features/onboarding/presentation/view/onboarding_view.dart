@@ -1,3 +1,5 @@
+import 'package:ajuda/core/helpers/extentions.dart';
+import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/core/utils/app_images.dart';
@@ -49,7 +51,9 @@ class OnboardingView extends StatelessWidget {
                 width: 165,
                 child: CustomButton(
                   text: 'Start donating',
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushReplacementNamed(Routing.login);
+                  },
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
