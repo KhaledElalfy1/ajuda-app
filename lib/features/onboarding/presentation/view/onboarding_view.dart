@@ -1,8 +1,10 @@
+import 'package:ajuda/core/database/cache/cashe_helper.dart';
 import 'package:ajuda/core/helpers/extentions.dart';
 import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/core/utils/app_images.dart';
+import 'package:ajuda/core/utils/get_it.dart';
 import 'package:ajuda/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -51,8 +53,12 @@ class OnboardingView extends StatelessWidget {
                 width: 165,
                 child: CustomButton(
                   text: 'Start donating',
-                  onPressed: () {
-                    context.pushReplacementNamed(Routing.login);
+                  onPressed: () async {
+                  await  getIt<CacheHelper>()
+                        .saveData(key: CacheKeys.isFirstTime, value: true);
+                   if(context.mounted){
+                     context.pushReplacementNamed(Routing.login);
+                   }
                   },
                   style: const TextStyle(
                     fontSize: 14,
