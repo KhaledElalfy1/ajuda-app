@@ -1,3 +1,4 @@
+import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/core/utils/app_images.dart';
 import 'package:ajuda/core/widgets/custom_button.dart';
@@ -17,30 +18,30 @@ class OnboardingView extends StatelessWidget {
             children: [
               const SizedBox(height: 20),
               SvgPicture.asset(AppIcons.iconsAppLogo),
-              const SizedBox(height: 50),
+              const SizedBox(height: 110),
               Image.asset(
                 AppImages.imagesOnboarding,
                 width: 327,
                 height: 205,
               ),
               const SizedBox(height: 50),
-             const Align(
+              Align(
                 alignment: AlignmentDirectional.topStart,
-                child:  Text(
+                child: Text(
                   'Donation made Easy',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    color: Colors.black,
+                    color: AppColors.black,
                   ),
                 ),
               ),
               const SizedBox(height: 8),
-              const Text(
+              Text(
                 'Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world.',
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.black,
+                  color: AppColors.black,
                 ),
               ),
               const Expanded(child: SizedBox()),
