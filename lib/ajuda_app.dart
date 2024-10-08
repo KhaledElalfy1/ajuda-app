@@ -1,5 +1,6 @@
 import 'package:ajuda/core/routers/app_routers.dart';
 import 'package:ajuda/core/routers/routing.dart';
+import 'package:ajuda/core/themes/themes.dart';
 import 'package:flutter/material.dart';
 
 class AjudaApp extends StatelessWidget {
@@ -11,6 +12,7 @@ class AjudaApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: Routing.onboarding,
       title: 'Ajuda',
+      theme: appTheme(),
      onGenerateRoute: AppRouters().generateRoute,
     );
   }
