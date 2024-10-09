@@ -1,4 +1,5 @@
 import 'package:ajuda/core/utils/app_colors.dart';
+import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,7 +9,10 @@ ThemeData appTheme() {
     textTheme: GoogleFonts.poppinsTextTheme(),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        minimumSize: const WidgetStatePropertyAll(Size(90, 56)),
+        textStyle: WidgetStatePropertyAll(
+            AppFonts.semiBold16.copyWith(color: AppColors.white)),
+        minimumSize: const WidgetStatePropertyAll(Size(150, 56)),
+        
         backgroundColor: const WidgetStatePropertyAll(AppColors.primaryColor),
         shape: WidgetStatePropertyAll(
           RoundedRectangleBorder(
@@ -19,12 +23,12 @@ ThemeData appTheme() {
     ),
     inputDecorationTheme: InputDecorationTheme(
       fillColor: AppColors.fillColor,
-      hintStyle:const TextStyle(
+      filled: true,
+      hintStyle: const TextStyle(
         color: Color(0xff818898),
         fontSize: 16,
         fontWeight: FontWeight.w400,
       ),
-      filled: true,
       border: borderDecoration(),
       enabledBorder: borderDecoration(),
       focusedBorder: borderDecoration(),
