@@ -4,7 +4,7 @@ import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/core/utils/app_images.dart';
-import 'package:ajuda/core/utils/get_it.dart';
+import 'package:ajuda/core/services/get_it.dart';
 import 'package:ajuda/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

@@ -3,7 +3,7 @@ import 'package:ajuda/core/database/cache/cashe_helper.dart';
 import 'package:ajuda/core/routers/app_routers.dart';
 import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/themes/themes.dart';
-import 'package:ajuda/core/utils/get_it.dart';
+import 'package:ajuda/core/services/get_it.dart';
 import 'package:flutter/material.dart';
 
 class AjudaApp extends StatelessWidget {
