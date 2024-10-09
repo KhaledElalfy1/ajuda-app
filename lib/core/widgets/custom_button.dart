@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(AppColors.primary),
+          backgroundColor: WidgetStateProperty.all(AppColors.primaryColor),
           shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(18),
@@ -32,10 +32,9 @@ class CustomButton extends StatelessWidget {
               text,
               style: style ??
                   const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white
-                  ),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white),
             ),
           ],
         ));
