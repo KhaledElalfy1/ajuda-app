@@ -1,7 +1,10 @@
+
 import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
+import 'package:ajuda/features/auth/presentation/view/widgets/dont_have_account_section.dart';
 import 'package:ajuda/features/auth/presentation/view/widgets/login_form_widget.dart';
+import 'package:ajuda/features/auth/presentation/view/widgets/terms_and_condition_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -47,7 +50,11 @@ class LoginView extends StatelessWidget {
                   ),
                 ),
                 const Gap(25),
-                const LoginFormWidget()
+                const LoginFormWidget(),
+                const Gap(30),
+                const DontHaveAccountSection(),
+                const Gap(8),
+                const TermsAndConditionSection(),
               ],
             ),
           ),
