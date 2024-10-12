@@ -1,6 +1,10 @@
+import 'dart:developer';
+
 import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
+import 'package:ajuda/features/auth/presentation/view/widgets/password_text_filed_builder.dart';
+import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -10,27 +14,17 @@ class LoginFormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: LoginCubit.get(context).formKey,
       child: Column(
         children: [
           CustomTextFormFiled(
-            controller: TextEditingController(), //TODO rebuild with cubit
+            controller: LoginCubit.get(context).emailController,
+            validator: LoginCubit.get(context).emailValidator,
             hintText: 'Email',
             keyboardType: TextInputType.emailAddress,
           ),
           const Gap(15),
-          CustomTextFormFiled(
-            controller: TextEditingController(), //TODO rebuild with cubit
-            hintText: 'Password',
-            keyboardType: TextInputType.visiblePassword,
-            obscureText: true,
-            icon: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.visibility,
-                color: Color(0xff818898),
-              ),
-            ),
-          ),
+          const PasswordTextFiledBuilder(),
           const Gap(5),
           Align(
             alignment: Alignment.centerRight,
@@ -48,7 +42,11 @@ class LoginFormWidget extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                if (LoginCubit.get(context).formKey.currentState!.validate()) {
+                  log('Login');
+                }
+              },
               child: Text(
                 'Sign in',
                 style: AppFonts.semiBold16.copyWith(
