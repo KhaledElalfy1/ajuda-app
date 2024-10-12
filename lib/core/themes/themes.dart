@@ -1,18 +1,20 @@
 import 'package:ajuda/core/utils/app_colors.dart';
-import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 ThemeData appTheme() {
   return ThemeData(
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.white,
+      elevation: 0,
+      iconTheme: IconThemeData(color: AppColors.black),
+      centerTitle: true,
+    ),
     scaffoldBackgroundColor: AppColors.white,
     textTheme: GoogleFonts.poppinsTextTheme(),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        textStyle: WidgetStatePropertyAll(
-            AppFonts.semiBold16.copyWith(color: AppColors.white)),
         minimumSize: const WidgetStatePropertyAll(Size(150, 56)),
-        
         backgroundColor: const WidgetStatePropertyAll(AppColors.primaryColor),
         shape: WidgetStatePropertyAll(
           RoundedRectangleBorder(

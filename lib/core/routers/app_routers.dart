@@ -1,9 +1,11 @@
 import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/features/auth/presentation/view/login_view.dart';
+import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:ajuda/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
- class AppRouters {
+class AppRouters {
   Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routing.onboarding:
@@ -11,7 +13,11 @@ import 'package:flutter/material.dart';
       case Routing.signUp:
         return MaterialPageRoute(builder: (_) => const Scaffold());
       case Routing.login:
-        return MaterialPageRoute(builder: (_) => const LoginView());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => LoginCubit(),
+                  child: const LoginView(),
+                ));
       case Routing.home:
         return MaterialPageRoute(builder: (_) => const Scaffold());
       case Routing.profile:
