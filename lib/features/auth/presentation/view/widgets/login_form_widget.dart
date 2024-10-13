@@ -1,5 +1,7 @@
 import 'dart:developer';
 
+import 'package:ajuda/core/helpers/extentions.dart';
+import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
@@ -29,7 +31,9 @@ class LoginFormWidget extends StatelessWidget {
           Align(
             alignment: Alignment.centerRight,
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routing.forgetPassword);
+              },
               child: Text(
                 'Forget password?',
                 style: AppFonts.regular12.copyWith(

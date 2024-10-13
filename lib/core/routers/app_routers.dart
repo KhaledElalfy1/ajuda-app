@@ -4,6 +4,7 @@ import 'package:ajuda/features/auth/presentation/view/sign_up_view.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:ajuda/features/auth/presentation/view_model/sign_up_cubit/sign_up_cubit.dart';
 import 'package:ajuda/features/onboarding/presentation/view/onboarding_view.dart';
+import 'package:ajuda/features/reset_password/presentation/view/reset_password_enter_email.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -29,7 +30,7 @@ class AppRouters {
       case Routing.profile:
         return MaterialPageRoute(builder: (_) => const Scaffold());
       case Routing.forgetPassword:
-        return MaterialPageRoute(builder: (_) => const Scaffold());
+        return MaterialPageRoute(builder: (_) => const ResetPasswordEnterEmail());
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold());
     }
