@@ -1,9 +1,12 @@
-import 'dart:developer';
 
+
+import 'package:ajuda/core/helpers/extentions.dart';
+import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
 class DontHaveAccountSection extends StatelessWidget {
   const DontHaveAccountSection({
     super.key,
@@ -22,7 +25,7 @@ class DontHaveAccountSection extends StatelessWidget {
             text: 'Sign up',
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                log('Sign up');
+                context.pushNamed(Routing.signUp);
               },
             style: AppFonts.semiBold16.copyWith(
               color: AppColors.black,
