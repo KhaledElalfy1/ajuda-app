@@ -4,7 +4,9 @@ import 'package:ajuda/features/auth/presentation/view/sign_up_view.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:ajuda/features/auth/presentation/view_model/sign_up_cubit/sign_up_cubit.dart';
 import 'package:ajuda/features/onboarding/presentation/view/onboarding_view.dart';
-import 'package:ajuda/features/reset_password/presentation/view/reset_password_enter_email.dart';
+import 'package:ajuda/features/reset_password/presentation/view/enter_email_view.dart';
+import 'package:ajuda/features/reset_password/presentation/view/otp_view.dart';
+import 'package:ajuda/features/reset_password/presentation/view/reset_password_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,7 +32,11 @@ class AppRouters {
       case Routing.profile:
         return MaterialPageRoute(builder: (_) => const Scaffold());
       case Routing.forgetPassword:
-        return MaterialPageRoute(builder: (_) => const ResetPasswordEnterEmail());
+        return MaterialPageRoute(builder: (_) => const EnterEmailView());
+      case Routing.enterOTP:
+        return MaterialPageRoute(builder: (_) => const OtpView());  
+      case Routing.restPassword:
+        return MaterialPageRoute(builder: (_) => const ResetPasswordView());  
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold());
     }
