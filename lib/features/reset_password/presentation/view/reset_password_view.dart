@@ -1,6 +1,7 @@
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
+import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -31,7 +32,7 @@ class ResetPasswordView extends StatelessWidget {
                 ),
                 const Gap(45),
                 CustomTextFormFiled(
-                  controller: TextEditingController(),
+                  controller: ForgetPasswordCubit.get(context).newPasswordController,
                   hintText: 'New Password',
                   keyboardType: TextInputType.visiblePassword,
                   obscureText: true,
@@ -45,7 +46,7 @@ class ResetPasswordView extends StatelessWidget {
                 ),
                 const Gap(20),
                 CustomTextFormFiled(
-                  controller: TextEditingController(),
+                  controller: ForgetPasswordCubit.get(context).reenterPasswordController,
                   hintText: 'rewrite Password',
                   keyboardType: TextInputType.visiblePassword,
                   obscureText: true,

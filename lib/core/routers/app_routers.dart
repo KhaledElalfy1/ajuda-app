@@ -1,4 +1,5 @@
 import 'package:ajuda/core/routers/routing.dart';
+import 'package:ajuda/core/services/get_it.dart';
 import 'package:ajuda/features/auth/presentation/view/login_view.dart';
 import 'package:ajuda/features/auth/presentation/view/sign_up_view.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
@@ -33,15 +34,23 @@ class AppRouters {
       case Routing.profile:
         return MaterialPageRoute(builder: (_) => const Scaffold());
       case Routing.forgetPassword:
-        return MaterialPageRoute(builder: (_) => const EnterEmailView());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => getIt<ForgetPasswordCubit>(),
+                  child: const EnterEmailView(),
+                ));
       case Routing.enterOTP:
         return MaterialPageRoute(
             builder: (_) => BlocProvider(
-                  create: (context) => ForgetPasswordCubit(),
+                  create: (context) => getIt<ForgetPasswordCubit>(),
                   child: const OtpView(),
                 ));
       case Routing.restPassword:
-        return MaterialPageRoute(builder: (_) => const ResetPasswordView());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => getIt<ForgetPasswordCubit>(),
+                  child: const ResetPasswordView(),
+                ));
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold());
     }
