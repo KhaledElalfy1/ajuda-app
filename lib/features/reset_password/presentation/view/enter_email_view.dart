@@ -33,19 +33,26 @@ class EnterEmailView extends StatelessWidget {
                   style: AppFonts.medium14,
                 ),
                 const Gap(45),
-                CustomTextFormFiled(
-                  controller: ForgetPasswordCubit.get(context).emailController,
-                  // validator: LoginCubit.get(context).emailValidator,
-                  hintText: 'Email',
-                  keyboardType: TextInputType.emailAddress,
+                Form(
+                  key: ForgetPasswordCubit.get(context).emailFormKey,
+                  child: CustomTextFormFiled(
+                    controller:
+                        ForgetPasswordCubit.get(context).emailController,
+                    validator: ForgetPasswordCubit.get(context).emailValidator,
+                    hintText: 'Email',
+                    keyboardType: TextInputType.emailAddress,
+                  ),
                 ),
                 const Gap(100),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      if (true) {
-                        context.pushReplacementNamed(Routing.enterOTP);
+                      if (ForgetPasswordCubit.get(context)
+                          .emailFormKey
+                          .currentState!
+                          .validate()) {
+                        context.pushNamed(Routing.enterOTP);
                       }
                     },
                     child: Text(

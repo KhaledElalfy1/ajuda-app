@@ -3,6 +3,7 @@ import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/features/reset_password/presentation/view/widgets/otp_digits_section.dart';
+import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -38,7 +39,12 @@ class OtpView extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      context.pushReplacementNamed(Routing.restPassword);
+                      if (ForgetPasswordCubit.get(context)
+                          .otpFormKey
+                          .currentState!
+                          .validate()) {
+                        context.pushNamed(Routing.restPassword);
+                      }
                     },
                     child: Text(
                       'Confirm',

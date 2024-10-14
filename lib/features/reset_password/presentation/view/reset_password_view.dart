@@ -1,6 +1,8 @@
+import 'dart:developer';
+
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
-import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
+import 'package:ajuda/features/reset_password/presentation/view/widgets/forget_password_form.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -31,38 +33,19 @@ class ResetPasswordView extends StatelessWidget {
                   style: AppFonts.medium14,
                 ),
                 const Gap(45),
-                CustomTextFormFiled(
-                  controller: ForgetPasswordCubit.get(context).newPasswordController,
-                  hintText: 'New Password',
-                  keyboardType: TextInputType.visiblePassword,
-                  obscureText: true,
-                  icon: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.visibility_off,
-                      color: Color(0xff818898),
-                    ),
-                  ),
-                ),
-                const Gap(20),
-                CustomTextFormFiled(
-                  controller: ForgetPasswordCubit.get(context).reenterPasswordController,
-                  hintText: 'rewrite Password',
-                  keyboardType: TextInputType.visiblePassword,
-                  obscureText: true,
-                  icon: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.visibility_off,
-                      color: Color(0xff818898),
-                    ),
-                  ),
-                ),
-               const Gap(75),
+                const ForgetPasswordForm(),
+                const Gap(75),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if (ForgetPasswordCubit.get(context)
+                          .newPasswordFormKey
+                          .currentState!
+                          .validate()) {
+                        log("password is valid");
+                      }
+                    },
                     child: Text(
                       'Confirm',
                       style: AppFonts.semiBold16.copyWith(
