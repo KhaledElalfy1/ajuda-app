@@ -1,4 +1,5 @@
 import 'package:ajuda/features/reset_password/presentation/view/widgets/otp_text_from_filed.dart';
+import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -15,30 +16,39 @@ class OTPDigitsSection extends StatelessWidget {
         children: [
           Expanded(
             child: OtpTextFromFiled(
-              controller: TextEditingController(),
-              focusNode: FocusNode(),
+              controller: ForgetPasswordCubit.get(context).otpController1,
+              focusNode: ForgetPasswordCubit.get(context).focusNode1,
               autoFocus: true,
+              onChanged: (p0) => ForgetPasswordCubit.get(context)
+                  .nextFiled(p0, ForgetPasswordCubit.get(context).focusNode2),
             ),
           ),
           const Gap(10),
           Expanded(
             child: OtpTextFromFiled(
-              controller: TextEditingController(),
-              focusNode: FocusNode(),
+              controller: ForgetPasswordCubit.get(context).otpController2,
+              focusNode: ForgetPasswordCubit.get(context).focusNode2,
+              onChanged: (p0) => ForgetPasswordCubit.get(context)
+                  .nextFiled(p0, ForgetPasswordCubit.get(context).focusNode3),
             ),
           ),
           const Gap(10),
           Expanded(
             child: OtpTextFromFiled(
-              controller: TextEditingController(),
-              focusNode: FocusNode(),
+              controller: ForgetPasswordCubit.get(context).otpController3,
+              focusNode: ForgetPasswordCubit.get(context).focusNode3,
+              onChanged: (p0) => ForgetPasswordCubit.get(context)
+                  .nextFiled(p0, ForgetPasswordCubit.get(context).focusNode4),
             ),
           ),
           const Gap(10),
           Expanded(
             child: OtpTextFromFiled(
-              controller: TextEditingController(),
-              focusNode: FocusNode(),
+              controller: ForgetPasswordCubit.get(context).otpController4,
+              focusNode: ForgetPasswordCubit.get(context).focusNode4,
+              onChanged: (p0) {
+                ForgetPasswordCubit.get(context).focusNode4.unfocus();
+              },
             ),
           ),
         ],

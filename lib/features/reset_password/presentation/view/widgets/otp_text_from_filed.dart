@@ -6,13 +6,14 @@ class OtpTextFromFiled extends StatelessWidget {
       required this.controller,
       required this.focusNode,
       this.validator,
-      this.autoFocus = false});
+      this.autoFocus = false, required this.onChanged});
   final TextEditingController controller;
 
   final FocusNode focusNode;
 
   final String? Function(String?)? validator;
   final bool autoFocus;
+  final void Function(String) onChanged;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -20,6 +21,7 @@ class OtpTextFromFiled extends StatelessWidget {
       focusNode: focusNode,
       validator: validator,
       autofocus: autoFocus,
+      onChanged:onChanged ,
       textAlign: TextAlign.center,
       maxLength: 1,
       decoration: const InputDecoration(
