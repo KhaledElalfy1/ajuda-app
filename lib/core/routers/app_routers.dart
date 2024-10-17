@@ -5,6 +5,7 @@ import 'package:ajuda/features/auth/presentation/view/sign_up_view.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:ajuda/features/auth/presentation/view_model/sign_up_cubit/sign_up_cubit.dart';
 import 'package:ajuda/features/home/presentation/view/home_view.dart';
+import 'package:ajuda/features/home/presentation/view_model/navigation_cubit/navigation_cubit.dart';
 import 'package:ajuda/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:ajuda/features/reset_password/presentation/view/enter_email_view.dart';
 import 'package:ajuda/features/reset_password/presentation/view/otp_view.dart';
@@ -31,7 +32,11 @@ class AppRouters {
                   child: const LoginView(),
                 ));
       case Routing.home:
-        return MaterialPageRoute(builder: (_) => const HomeView());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => NavigationCubit(),
+                  child: const HomeView(),
+                ));
       case Routing.profile:
         return MaterialPageRoute(builder: (_) => const Scaffold());
       case Routing.forgetPassword:
