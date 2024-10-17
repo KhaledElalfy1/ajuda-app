@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:ajuda/core/helpers/extentions.dart';
 import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_colors.dart';
@@ -48,7 +46,7 @@ class LoginFormWidget extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {
                 if (LoginCubit.get(context).formKey.currentState!.validate()) {
-                  log('Login');
+                  context.pushReplacementNamed(Routing.home);
                 }
               },
               child: Text(
