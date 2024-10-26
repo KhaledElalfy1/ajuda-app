@@ -1,8 +1,8 @@
 
 import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
-import 'package:ajuda/features/home/presentation/view_model/navigation_cubit/navigation_cubit.dart';
-import 'package:ajuda/features/home/presentation/view_model/navigation_cubit/navigation_state.dart';
+import 'package:ajuda/features/main/presentation/view_model/navigation_cubit/navigation_cubit.dart';
+import 'package:ajuda/features/main/presentation/view_model/navigation_cubit/navigation_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
