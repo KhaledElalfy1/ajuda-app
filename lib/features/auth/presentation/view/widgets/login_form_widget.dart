@@ -7,7 +7,7 @@ import 'package:ajuda/features/auth/presentation/view/widgets/password_text_file
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({super.key});
 
@@ -23,9 +23,9 @@ class LoginFormWidget extends StatelessWidget {
             hintText: 'Email',
             keyboardType: TextInputType.emailAddress,
           ),
-          const Gap(15),
+           Gap(15.h),
           const PasswordTextFiledBuilder(),
-          const Gap(5),
+           Gap(5.h),
           Align(
             alignment: Alignment.centerRight,
             child: TextButton(
@@ -40,7 +40,7 @@ class LoginFormWidget extends StatelessWidget {
               ),
             ),
           ),
-          const Gap(25),
+           Gap(25.h),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(

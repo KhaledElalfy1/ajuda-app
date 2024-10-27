@@ -6,7 +6,7 @@ import 'package:ajuda/features/auth/presentation/view/widgets/sign_up_form_widge
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
 
@@ -15,23 +15,23 @@ class SignUpView extends StatelessWidget {
     return Scaffold(
       appBar: customAppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+        padding:  EdgeInsets.symmetric(horizontal: 24.0.w),
         child: Center(
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SignInWithGoogleButton(),
-                const Gap(25),
+                 Gap(25.h),
                 Text(
                   'or',
                   style: AppFonts.medium16.copyWith(
                     color: AppColors.greyColor,
                   ),
                 ),
-                const Gap(25),
+                 Gap(25.h),
                 const SignUpFormWidget(),
-                const Gap(30),
+                 Gap(30.h),
                 Text.rich(
                   TextSpan(
                     text: 'Already have an account? ',

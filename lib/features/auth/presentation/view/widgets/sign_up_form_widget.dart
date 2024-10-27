@@ -8,7 +8,7 @@ import 'package:ajuda/features/auth/presentation/view_model/sign_up_cubit/sign_u
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 class SignUpFormWidget extends StatelessWidget {
   const SignUpFormWidget({super.key});
 
@@ -24,14 +24,14 @@ class SignUpFormWidget extends StatelessWidget {
             validator: SignUpCubit.get(context).nameValidator,
             keyboardType: TextInputType.name,
           ),
-          const Gap(15),
+           Gap(15.h),
           CustomTextFormFiled(
             controller: SignUpCubit.get(context).emailController,
             validator: SignUpCubit.get(context).emailValidator,
             hintText: 'Email',
             keyboardType: TextInputType.emailAddress,
           ),
-          const Gap(15),
+           Gap(15.h),
           BlocBuilder<SignUpCubit, SignUpState>(
             builder: (context, state) {
               return CustomTextFormFiled(
@@ -51,7 +51,7 @@ class SignUpFormWidget extends StatelessWidget {
             },
           ),
           const AgreeWithTermsSection(),
-          const Gap(30),
+           Gap(30.h),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
