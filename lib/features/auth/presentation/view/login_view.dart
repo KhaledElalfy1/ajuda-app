@@ -7,6 +7,7 @@ import 'package:ajuda/features/auth/presentation/view/widgets/sign_in_with_googl
 import 'package:ajuda/features/auth/presentation/view/widgets/terms_and_condition_section.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -16,25 +17,25 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       appBar: customAppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+        padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Center(
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-               const SignInWithGoogleButton(),
-                const Gap(25),
+                const SignInWithGoogleButton(),
+                Gap(25.h),
                 Text(
                   'or',
                   style: AppFonts.medium16.copyWith(
                     color: AppColors.greyColor,
                   ),
                 ),
-                const Gap(25),
+                Gap(25.h),
                 const LoginFormWidget(),
-                const Gap(30),
+                Gap(30.h),
                 const DontHaveAccountSection(),
-                const Gap(8),
+                Gap(8.h),
                 const TermsAndConditionSection(),
               ],
             ),
@@ -44,4 +45,3 @@ class LoginView extends StatelessWidget {
     );
   }
 }
-
