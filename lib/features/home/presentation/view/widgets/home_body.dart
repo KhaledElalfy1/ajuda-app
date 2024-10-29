@@ -1,5 +1,6 @@
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/features/home/presentation/view/widgets/custom_carousel_slider.dart';
+import 'package:ajuda/features/home/presentation/view/widgets/donation_balance_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -19,7 +20,9 @@ class HomeBody extends StatelessWidget {
             style: AppFonts.semiBold12,
           ),
           Gap(10.h),
-         const CustomCarouselSlider(),
+          const CustomCarouselSlider(),
+          Gap(20.h),
+         const DonationBalanceWidget(),
         ],
       ),
     );
