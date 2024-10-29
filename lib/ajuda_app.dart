@@ -28,7 +28,7 @@ class AjudaApp extends StatelessWidget {
 
   String initRouting() {
     if (getIt<CacheHelper>().getData(key: CacheKeys.isFirstTime)) {
-      return Routing.login;
+      return Routing.home;
     }
     return Routing.onboarding;
   }
