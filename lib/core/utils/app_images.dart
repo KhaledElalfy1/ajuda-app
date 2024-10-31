@@ -10,6 +10,10 @@ class AppImages {
   /// assets/images/app_icon.png
   static const String imagesAppIcon = "assets/images/app_icon.png";
 
+  /// Assets for imagesDonationLocation
+  /// assets/images/donation_location.png
+  static const String imagesDonationLocation = "assets/images/donation_location.png";
+
   /// Assets for imagesDonationOne
   /// assets/images/donation_one.png
   static const String imagesDonationOne = "assets/images/donation_one.png";
@@ -17,6 +21,10 @@ class AppImages {
   /// Assets for imagesDonationTwo
   /// assets/images/donation_two.png
   static const String imagesDonationTwo = "assets/images/donation_two.png";
+
+  /// Assets for imagesLocation
+  /// assets/images/location.png
+  static const String imagesLocation = "assets/images/location.png";
 
   /// Assets for imagesOnboarding
   /// assets/images/onboarding.png

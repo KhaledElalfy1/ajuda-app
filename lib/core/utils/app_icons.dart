@@ -34,9 +34,9 @@ class AppIcons {
   /// assets/icons/lock.svg
   static const String iconsLock = "assets/icons/lock.svg";
 
-  /// Assets for iconsLog out
-  /// assets/icons/log out.svg
-  static const String iconsLogout = "assets/icons/log_out.svg";
+  /// Assets for iconsLogOut
+  /// assets/icons/log_out.svg
+  static const String iconsLogOut = "assets/icons/log_out.svg";
 
   /// Assets for iconsMessage
   /// assets/icons/message.svg
@@ -65,5 +65,9 @@ class AppIcons {
   /// Assets for iconsSettings
   /// assets/icons/settings.svg
   static const String iconsSettings = "assets/icons/settings.svg";
+
+  /// Assets for iconsVerified
+  /// assets/icons/verified.svg
+  static const String iconsVerified = "assets/icons/verified.svg";
 }
 
