@@ -16,7 +16,6 @@ class HomeBody extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 22.0.h),
       child: CustomScrollView(
-        clipBehavior: Clip.none,
         slivers: [
           SliverToBoxAdapter(
             child: Text(
@@ -51,4 +50,3 @@ class HomeBody extends StatelessWidget {
     );
   }
 }
-
