@@ -22,14 +22,15 @@ class DonationBalanceWidget extends StatelessWidget {
       child: Row(
         children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Donation balance :',
-                style: AppFonts.regular12.copyWith(color: Colors.grey),
+                style: AppFonts.regular16.copyWith(color: Colors.grey),
               ),
               Text(
                 'Rp. 200.000',
-                style: AppFonts.medium12,
+                style: AppFonts.medium16,
               ),
             ],
           ),
@@ -38,7 +39,7 @@ class DonationBalanceWidget extends StatelessWidget {
             onPressed: () {},
             icon: SvgPicture.asset(
               AppIcons.iconsPlus,
-              height: 30.h,
+              height: 35.h,
             ),
           ),
           Gap(15.w),
@@ -46,7 +47,7 @@ class DonationBalanceWidget extends StatelessWidget {
             onPressed: () {},
             icon: SvgPicture.asset(
               AppIcons.iconsHistory,
-              height: 30.h,
+              height: 35.h,
             ),
           ),
         ],
