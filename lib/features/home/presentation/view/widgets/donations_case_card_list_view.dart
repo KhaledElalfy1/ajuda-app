@@ -2,7 +2,6 @@ import 'package:ajuda/core/models/donation_model.dart';
 import 'package:ajuda/core/utils/app_images.dart';
 import 'package:ajuda/features/home/presentation/view/widgets/donation_case_card_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DonationsCaseCardListView extends StatelessWidget {
   const DonationsCaseCardListView({
@@ -12,8 +11,8 @@ class DonationsCaseCardListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
-      child: SizedBox(
-        height: 300.h,
+      child: AspectRatio(
+        aspectRatio: 1 / .9,
         child: ListView.separated(
           separatorBuilder: (context, index) => const SizedBox(width: 10),
           scrollDirection: Axis.horizontal,

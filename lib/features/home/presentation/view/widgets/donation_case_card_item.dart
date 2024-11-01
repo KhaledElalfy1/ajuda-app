@@ -24,13 +24,21 @@ class DonationCaseCardItem extends StatelessWidget {
         border: Border.all(
           color: AppColors.borderColor,
         ),
-        borderRadius: BorderRadius.circular(8.r),
+        borderRadius: BorderRadius.circular(
+          8.r,
+        ),
       ),
       child: Column(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(8.r), topRight: Radius.circular(8.r)),
+              topLeft: Radius.circular(
+                8.r,
+              ),
+              topRight: Radius.circular(
+                8.r,
+              ),
+            ),
             child: Image.asset(
               donationModel.imageUrl,
               height: 150.h,
@@ -52,10 +60,13 @@ class DonationCaseCardItem extends StatelessWidget {
                 ),
               ),
               Gap(4.w),
-              SvgPicture.asset(
-                AppIcons.iconsVerified,
-                height: 20.h,
-                width: 20.w,
+              Visibility(
+                visible: donationModel.isVerified,
+                child: SvgPicture.asset(
+                  AppIcons.iconsVerified,
+                  height: 20.h,
+                  width: 20.w,
+                ),
               ),
             ],
           ),
@@ -66,7 +77,7 @@ class DonationCaseCardItem extends StatelessWidget {
           ),
           Gap(8.h),
           LinearPercentIndicator(
-            lineHeight: 14.0,
+            lineHeight: 10.0,
             addAutomaticKeepAlive: true,
             animation: true,
             animationDuration: 1000,
@@ -76,6 +87,7 @@ class DonationCaseCardItem extends StatelessWidget {
             backgroundColor: const Color(0xffFFE9B0),
             progressColor: AppColors.primaryColor,
           ),
+          Gap(8.h),
           Text.rich(
             TextSpan(
               text: 'collected ',
@@ -89,7 +101,7 @@ class DonationCaseCardItem extends StatelessWidget {
               ],
             ),
           ),
-          Gap(13.h),
+          Gap(8.h),
         ],
       ),
     );
