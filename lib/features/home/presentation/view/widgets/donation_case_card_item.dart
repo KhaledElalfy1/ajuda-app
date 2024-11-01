@@ -47,33 +47,43 @@ class DonationCaseCardItem extends StatelessWidget {
             ),
           ),
           Gap(4.h),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(
-                donationModel.donationCategory,
-                style: AppFonts.regular12.copyWith(
-                  color: const Color(
-                    0xff666D80,
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        donationModel.donationCategory,
+                        style: AppFonts.regular12.copyWith(
+                          color: const Color(
+                            0xff666D80,
+                          ),
+                        ),
+                      ),
+                      Gap(4.w),
+                      Visibility(
+                        visible: donationModel.isVerified,
+                        child: SvgPicture.asset(
+                          AppIcons.iconsVerified,
+                          height: 20.h,
+                          width: 20.w,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ),
-              Gap(4.w),
-              Visibility(
-                visible: donationModel.isVerified,
-                child: SvgPicture.asset(
-                  AppIcons.iconsVerified,
-                  height: 20.h,
-                  width: 20.w,
+                Gap(8.h),
+                Text(
+                  donationModel.donationTitle,
+                  style: AppFonts.medium16,
                 ),
-              ),
-            ],
-          ),
-          Gap(8.h),
-          Text(
-            donationModel.donationTitle,
-            style: AppFonts.medium16,
+              ],
+            ),
           ),
           Gap(8.h),
           LinearPercentIndicator(
@@ -88,17 +98,23 @@ class DonationCaseCardItem extends StatelessWidget {
             progressColor: AppColors.primaryColor,
           ),
           Gap(8.h),
-          Text.rich(
-            TextSpan(
-              text: 'collected ',
-              children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text.rich(
                 TextSpan(
-                  text: '\$${donationModel.donatedMoney}',
-                  style: AppFonts.medium14.copyWith(
-                    color: AppColors.primaryColor,
-                  ),
+                  text: 'collected ',
+                  children: [
+                    TextSpan(
+                      text: '\$${donationModel.donatedMoney}',
+                      style: AppFonts.medium14.copyWith(
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
           Gap(8.h),
