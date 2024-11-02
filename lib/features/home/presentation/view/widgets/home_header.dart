@@ -1,3 +1,5 @@
+import 'package:ajuda/core/helpers/extentions.dart';
+import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
 import 'package:flutter/material.dart';
@@ -9,34 +11,36 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: SizedBox(
-                height: 40.h,
-                child: CustomTextFormFiled(
-                  controller: TextEditingController(),
-                  hintText: 'Help others ...',
-                  keyboardType: TextInputType.text,
-                  icon: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      AppIcons.iconsSearch,
-                      height: 16.h,
-                      width: 16.h,
-                    ),
-                  ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          child: SizedBox(
+            height: 40.h,
+            child: CustomTextFormFiled(
+              controller: TextEditingController(),
+              hintText: 'Help others ...',
+              keyboardType: TextInputType.text,
+              icon: IconButton(
+                onPressed: () {},
+                icon: SvgPicture.asset(
+                  AppIcons.iconsSearch,
+                  height: 16.h,
+                  width: 16.h,
                 ),
               ),
             ),
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                AppIcons.iconsSaved,
-              ),
-            ),
-          ],
-        );
+          ),
+        ),
+        IconButton(
+          onPressed: () {
+            context.pushNamed(Routing.savedDonations);
+          },
+          icon: SvgPicture.asset(
+            AppIcons.iconsSaved,
+          ),
+        ),
+      ],
+    );
   }
 }

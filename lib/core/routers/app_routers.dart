@@ -11,6 +11,7 @@ import 'package:ajuda/features/reset_password/presentation/view/enter_email_view
 import 'package:ajuda/features/reset_password/presentation/view/otp_view.dart';
 import 'package:ajuda/features/reset_password/presentation/view/reset_password_view.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
+import 'package:ajuda/features/saved_donations/presentation/view/saved_donations_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -39,6 +40,8 @@ class AppRouters {
                 ));
       case Routing.profile:
         return MaterialPageRoute(builder: (_) => const Scaffold());
+      case Routing.savedDonations:
+        return MaterialPageRoute(builder: (_) => const SavedDonationsView());
       case Routing.forgetPassword:
         return MaterialPageRoute(
             builder: (_) => BlocProvider(

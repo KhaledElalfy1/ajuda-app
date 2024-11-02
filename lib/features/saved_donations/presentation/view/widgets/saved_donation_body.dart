@@ -1,0 +1,38 @@
+
+import 'package:ajuda/core/models/donation_model.dart';
+import 'package:ajuda/core/utils/app_images.dart';
+import 'package:ajuda/features/home/presentation/view/widgets/donation_case_card_item.dart';
+import 'package:flutter/material.dart';
+
+class SavedDonationBody extends StatelessWidget {
+  const SavedDonationBody({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      child: GridView.builder(
+        itemCount: 5,
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            childAspectRatio: .5,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10),
+        itemBuilder: (context, index) => DonationCaseCardItem(
+          donationModel: DonationModel(
+            imageUrl: AppImages.imagesDonationLocation,
+            donationCategory: 'Bantubarengan',
+            isVerified: true,
+            donationTitle: 'Bantu muslim indonesia ke mekkah.',
+            donatedMoney: '12000',
+            donatedTotalMoney: '24000',
+            donationLocation: 'Jakarta',
+            totalViews: '10k',
+          ),
+        ),
+      ),
+    );
+  }
+}
