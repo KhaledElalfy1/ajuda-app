@@ -1,7 +1,7 @@
 
 import 'package:ajuda/core/models/donation_model.dart';
 import 'package:ajuda/core/utils/app_images.dart';
-import 'package:ajuda/features/home/presentation/view/widgets/donation_case_card_item.dart';
+import 'package:ajuda/core/widgets/donation_case_card_item.dart';
 import 'package:flutter/material.dart';
 
 class SavedDonationBody extends StatelessWidget {
