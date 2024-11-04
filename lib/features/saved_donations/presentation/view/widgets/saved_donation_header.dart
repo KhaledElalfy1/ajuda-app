@@ -10,8 +10,7 @@ class SavedDonationHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         IconButton(
           onPressed: () {
@@ -21,10 +20,15 @@ class SavedDonationHeader extends StatelessWidget {
             Icons.arrow_back,
           ),
         ),
-        Text(
-          "saved",
-          style: AppFonts.semiBold20,
+        const Spacer(),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10.0),
+          child: Text(
+            "saved",
+            style: AppFonts.semiBold20,
+          ),
         ),
+        const Spacer(),
       ],
     );
   }
