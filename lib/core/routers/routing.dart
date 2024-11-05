@@ -8,5 +8,6 @@ abstract class Routing {
   static const String forgetPassword = '/forgetPassword';
   static const String enterOTP = '/enterOTP';
   static const String restPassword = '/restPassword';
+  static const String savedDonations = '/savedDonations';
 
 }
