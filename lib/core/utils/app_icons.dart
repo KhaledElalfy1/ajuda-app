@@ -69,5 +69,9 @@ class AppIcons {
   /// Assets for iconsVerified
   /// assets/icons/verified.svg
   static const String iconsVerified = "assets/icons/verified.svg";
+
+   /// Assets for iconsFilter
+  /// assets/icons/filter.svg
+  static const String iconsFilter = "assets/icons/filter.svg";
 }
 
