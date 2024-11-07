@@ -1,4 +1,5 @@
 import 'package:ajuda/core/models/donation_model.dart';
+import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/core/utils/app_images.dart';
 import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
@@ -41,6 +42,13 @@ class FavoriteViewBody extends StatelessWidget {
             ),
           ),
           SliverGap(30.h),
+          SliverToBoxAdapter(
+            child: Text(
+              'Latest fundraiser',
+              style: AppFonts.semiBold16,
+            ),
+          ),
+          SliverGap(15.h),
           SliverGrid.builder(
             itemCount: 5,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
