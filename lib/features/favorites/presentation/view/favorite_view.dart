@@ -1,3 +1,6 @@
+import 'package:ajuda/core/utils/app_fonts.dart';
+import 'package:ajuda/core/widgets/custom_decorated_body.dart';
+import 'package:ajuda/features/favorites/presentation/view/widgets/favorite_view_body.dart';
 import 'package:flutter/material.dart';
 
 class FavoriteView extends StatelessWidget {
@@ -5,10 +8,19 @@ class FavoriteView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Favorite View'),
+    return Scaffold(
+      body: CustomDecoratedBody(
+        headerChild: Padding(
+          padding: const EdgeInsets.only(top: 15.0),
+          child: Text(
+            'Donations',
+            textAlign: TextAlign.center,
+            style: AppFonts.semiBold20,
+          ),
+        ),
+        bodyChild:const FavoriteViewBody(),
       ),
     );
   }
 }
+
