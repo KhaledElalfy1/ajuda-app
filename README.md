@@ -1,7 +1,8 @@
 # ajuda
 
 A new Flutter project.
-
+## App Icon
+![Alt text](<assets/images/app_icon.png>)
 ## Getting Started
 
 This project is a starting point for a Flutter application.
