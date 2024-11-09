@@ -4,16 +4,16 @@ import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
+import 'package:ajuda/core/widgets/custom_linear_perent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class DonationCaseCardItem extends StatelessWidget {
   const DonationCaseCardItem({
     super.key,
-    required this.donationModel,
+    required this.donationModel
   });
   final DonationModel donationModel;
   @override
@@ -91,17 +91,7 @@ class DonationCaseCardItem extends StatelessWidget {
               ),
             ),
             Gap(8.h),
-            LinearPercentIndicator(
-              lineHeight: 10.0,
-              addAutomaticKeepAlive: true,
-              animation: true,
-              animationDuration: 1000,
-              barRadius: const Radius.circular(50),
-              percent: double.parse(donationModel.donatedMoney) /
-                  double.parse(donationModel.donatedTotalMoney),
-              backgroundColor: const Color(0xffFFE9B0),
-              progressColor: AppColors.primaryColor,
-            ),
+            CustomLinearPercentIndicator(donationModel: donationModel),
             Gap(8.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0.w),
@@ -129,3 +119,4 @@ class DonationCaseCardItem extends StatelessWidget {
     );
   }
 }
+

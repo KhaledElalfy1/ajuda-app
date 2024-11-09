@@ -66,6 +66,7 @@ class FavoriteViewBody extends StatelessWidget {
                 donatedTotalMoney: '24000',
                 donationLocation: 'Jakarta',
                 totalViews: '10k',
+                donationDescription: 'Lorem ipsum dolor sit amet consectetur. Ultricies ut augue amet vel hac. Ut orci adipiscing fusce lacus lectus rhoncus.'
               ),
             ),
           ),

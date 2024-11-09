@@ -1,4 +1,3 @@
-
 import 'package:ajuda/core/models/donation_model.dart';
 import 'package:ajuda/core/utils/app_images.dart';
 import 'package:ajuda/core/widgets/donation_case_card_item.dart';
@@ -22,15 +21,16 @@ class SavedDonationBody extends StatelessWidget {
             mainAxisSpacing: 10),
         itemBuilder: (context, index) => DonationCaseCardItem(
           donationModel: DonationModel(
-            imageUrl: AppImages.imagesDonationLocation,
-            donationCategory: 'Bantubarengan',
-            isVerified: true,
-            donationTitle: 'Bantu muslim indonesia ke mekkah.',
-            donatedMoney: '12000',
-            donatedTotalMoney: '24000',
-            donationLocation: 'Jakarta',
-            totalViews: '10k',
-          ),
+              imageUrl: AppImages.imagesDonationLocation,
+              donationCategory: 'Bantubarengan',
+              isVerified: true,
+              donationTitle: 'Bantu muslim indonesia ke mekkah.',
+              donatedMoney: '12000',
+              donatedTotalMoney: '24000',
+              donationLocation: 'Jakarta',
+              totalViews: '10k',
+              donationDescription:
+                  'Lorem ipsum dolor sit amet consectetur. Ultricies ut augue amet vel hac. Ut orci adipiscing fusce lacus lectus rhoncus.'),
         ),
       ),
     );
