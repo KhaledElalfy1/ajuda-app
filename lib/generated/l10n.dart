@@ -49,6 +49,36 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Donation made Easy`
+  String get onboardingTitle {
+    return Intl.message(
+      'Donation made Easy',
+      name: 'onboardingTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world.`
+  String get onboardingDescription {
+    return Intl.message(
+      'Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world.',
+      name: 'onboardingDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Donating`
+  String get startDonating {
+    return Intl.message(
+      'Start Donating',
+      name: 'startDonating',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

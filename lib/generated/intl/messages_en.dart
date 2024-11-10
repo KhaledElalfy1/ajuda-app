@@ -21,5 +21,11 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "onboardingDescription": MessageLookupByLibrary.simpleMessage(
+            "Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world."),
+        "onboardingTitle":
+            MessageLookupByLibrary.simpleMessage("Donation made Easy"),
+        "startDonating": MessageLookupByLibrary.simpleMessage("Start Donating")
+      };
 }
