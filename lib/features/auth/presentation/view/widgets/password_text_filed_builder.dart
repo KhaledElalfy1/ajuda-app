@@ -1,6 +1,7 @@
 import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_state.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,7 +17,7 @@ class PasswordTextFiledBuilder extends StatelessWidget {
         return CustomTextFormFiled(
           controller: LoginCubit.get(context).passwordController,
           validator: LoginCubit.get(context).passwordValidator,
-          hintText: 'Password',
+          hintText: S.of(context).password,
           keyboardType: TextInputType.visiblePassword,
           obscureText: LoginCubit.get(context).isPasswordVisible,
           icon: IconButton(

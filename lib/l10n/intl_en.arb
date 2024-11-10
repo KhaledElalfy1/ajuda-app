@@ -1,5 +1,19 @@
 {
     "onboardingTitle":"Donation made Easy",
     "onboardingDescription":"Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world.",
-    "startDonating":"Start Donating"
+    "startDonating":"Start Donating",
+    "signInView":"////////////////////////////////////////////////",
+    "email":"Email",
+    "password":"Password",
+    "forgotPassword":"Forgot Password?",
+    "signInWithGoogle":"Sign in with Google",
+    "signIn":"Sign In",
+    "dontHaveAccount":"Don't have an account?",
+    "bySiningInYouAccept":"By signing in you accept the",
+    "termsOfService":"Terms of Service",
+    "and":"and",
+    "privacyPolicy":"Privacy Policy",
+    "or":"or",
+    "signUp":"Sign Up"
+
 }

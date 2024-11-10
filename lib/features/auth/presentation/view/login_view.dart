@@ -5,6 +5,7 @@ import 'package:ajuda/features/auth/presentation/view/widgets/dont_have_account_
 import 'package:ajuda/features/auth/presentation/view/widgets/login_form_widget.dart';
 import 'package:ajuda/features/auth/presentation/view/widgets/sign_in_with_google_button.dart';
 import 'package:ajuda/features/auth/presentation/view/widgets/terms_and_condition_section.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,7 +27,7 @@ class LoginView extends StatelessWidget {
                 const SignInWithGoogleButton(),
                 Gap(25.h),
                 Text(
-                  'or',
+                  S.of(context).or,
                   style: AppFonts.medium16.copyWith(
                     color: AppColors.greyColor,
                   ),

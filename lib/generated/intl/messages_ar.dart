@@ -22,10 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "and": MessageLookupByLibrary.simpleMessage("و"),
+        "bySiningInYouAccept":
+            MessageLookupByLibrary.simpleMessage("بتسجيل الدخول ، فإنك تقبل"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "onboardingDescription": MessageLookupByLibrary.simpleMessage(
             "Ajuda هي منصة للأفراد الذين يرغبون في التبرع لبرامج اجتماعية مختلفة وجمعيات خيرية حول العالم."),
         "onboardingTitle":
             MessageLookupByLibrary.simpleMessage("إجعل التبرع أسهل"),
-        "startDonating": MessageLookupByLibrary.simpleMessage("ابدأ التبرع")
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+        "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "signInView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
+        "signInWithGoogle":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول بواسطة جوجل"),
+        "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+        "startDonating": MessageLookupByLibrary.simpleMessage("ابدأ التبرع"),
+        "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة")
       };
 }

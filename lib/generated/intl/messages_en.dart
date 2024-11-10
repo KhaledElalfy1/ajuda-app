@@ -22,10 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "and": MessageLookupByLibrary.simpleMessage("and"),
+        "bySiningInYouAccept": MessageLookupByLibrary.simpleMessage(
+            "By signing in you accept the"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "onboardingDescription": MessageLookupByLibrary.simpleMessage(
             "Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world."),
         "onboardingTitle":
             MessageLookupByLibrary.simpleMessage("Donation made Easy"),
-        "startDonating": MessageLookupByLibrary.simpleMessage("Start Donating")
+        "or": MessageLookupByLibrary.simpleMessage("or"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
+        "signInView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
+        "signInWithGoogle":
+            MessageLookupByLibrary.simpleMessage("Sign in with Google"),
+        "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "startDonating": MessageLookupByLibrary.simpleMessage("Start Donating"),
+        "termsOfService":
+            MessageLookupByLibrary.simpleMessage("Terms of Service")
       };
 }

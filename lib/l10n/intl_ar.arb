@@ -1,5 +1,19 @@
 {
     "onboardingTitle":"إجعل التبرع أسهل",
     "onboardingDescription":"Ajuda هي منصة للأفراد الذين يرغبون في التبرع لبرامج اجتماعية مختلفة وجمعيات خيرية حول العالم.",
-    "startDonating":"ابدأ التبرع"
+    "startDonating":"ابدأ التبرع",
+    "signInView":"////////////////////////////////////////////////",
+    "email":"البريد الإلكتروني",
+    "password":"كلمة المرور",
+    "forgotPassword":"نسيت كلمة المرور؟",
+    "signInWithGoogle":"تسجيل الدخول بواسطة جوجل",
+    "signIn":"تسجيل الدخول",
+    "dontHaveAccount":"ليس لديك حساب؟",
+    "bySiningInYouAccept":"بتسجيل الدخول ، فإنك تقبل",
+    "termsOfService":"شروط الخدمة",
+    "and":"و",
+    "privacyPolicy":"سياسة الخصوصية",
+    "or":"أو",
+    "signUp":"إنشاء حساب"
+
 }

@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class TermsAndConditionSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text.rich(
       TextSpan(
-        text: "By signing in you accept the",
+        text: S.of(context).bySiningInYouAccept,
         style: AppFonts.medium14.copyWith(
           color: AppColors.greyColor,
         ),
@@ -24,18 +25,18 @@ class TermsAndConditionSection extends StatelessWidget {
               ..onTap = () {
                 log('Terms of Service');
               },
-            text: ' Terms of Service',
+            text: ' ${S.of(context).termsOfService}',
             style: AppFonts.medium14.copyWith(
                 color: AppColors.black, decoration: TextDecoration.underline),
           ),
           TextSpan(
-            text: ' and ',
+            text: ' ${S.of(context).and} ',
             style: AppFonts.medium14.copyWith(
               color: AppColors.greyColor,
             ),
           ),
           TextSpan(
-            text: 'Privacy Policy',
+            text: ' ${S.of(context).privacyPolicy}',
             recognizer: TapGestureRecognizer()
               ..onTap = () {
                 log('Privacy Policy.');
