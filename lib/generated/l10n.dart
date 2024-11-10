@@ -209,6 +209,56 @@ class S {
       args: [],
     );
   }
+
+  /// `////////////////////////////////////////////////`
+  String get signUpView {
+    return Intl.message(
+      '////////////////////////////////////////////////',
+      name: 'signUpView',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I agree to the`
+  String get iAgreeTo {
+    return Intl.message(
+      'I agree to the',
+      name: 'iAgreeTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get alreadyHaveAccount {
+    return Intl.message(
+      'Already have an account?',
+      name: 'alreadyHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You must agree with terms of services and privacy policy`
+  String get youMastAgree {
+    return Intl.message(
+      'You must agree with terms of services and privacy policy',
+      name: 'youMastAgree',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

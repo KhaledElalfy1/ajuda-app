@@ -14,6 +14,12 @@
     "and":"and",
     "privacyPolicy":"Privacy Policy",
     "or":"or",
-    "signUp":"Sign Up"
+    "signUp":"Sign Up",
+    "signUpView":"////////////////////////////////////////////////",
+    "name":"Name",
+    "iAgreeTo":"I agree to the",
+    "alreadyHaveAccount":"Already have an account?",
+    "youMastAgree":"You must agree with terms of services and privacy policy"
+
 
 }
