@@ -70,8 +70,16 @@ class AppIcons {
   /// assets/icons/verified.svg
   static const String iconsVerified = "assets/icons/verified.svg";
 
-   /// Assets for iconsFilter
+  /// Assets for iconsFilter
   /// assets/icons/filter.svg
   static const String iconsFilter = "assets/icons/filter.svg";
+
+   /// Assets for iconsEye
+  /// assets/icons/eye.svg
+  static const String iconsEye = "assets/icons/eye.svg";
+
+   /// Assets for iconsLocation
+  /// assets/icons/location.svg
+  static const String iconsLocation = "assets/icons/location.svg";
 }
 

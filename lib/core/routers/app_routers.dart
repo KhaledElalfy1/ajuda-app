@@ -1,9 +1,11 @@
+import 'package:ajuda/core/models/donation_model.dart';
 import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/services/get_it.dart';
 import 'package:ajuda/features/auth/presentation/view/login_view.dart';
 import 'package:ajuda/features/auth/presentation/view/sign_up_view.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:ajuda/features/auth/presentation/view_model/sign_up_cubit/sign_up_cubit.dart';
+import 'package:ajuda/features/donation_details/presentation/view/donation_details.dart';
 import 'package:ajuda/features/main/presentation/view/main_view.dart';
 import 'package:ajuda/features/main/presentation/view_model/navigation_cubit/navigation_cubit.dart';
 import 'package:ajuda/features/onboarding/presentation/view/onboarding_view.dart';
@@ -17,6 +19,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouters {
   Route generateRoute(RouteSettings settings) {
+   var argument=settings.arguments;
     switch (settings.name) {
       case Routing.onboarding:
         return MaterialPageRoute(builder: (_) => const OnboardingView());
@@ -42,6 +45,8 @@ class AppRouters {
         return MaterialPageRoute(builder: (_) => const Scaffold());
       case Routing.savedDonations:
         return MaterialPageRoute(builder: (_) => const SavedDonationsView());
+      case Routing.donationDetails:
+        return MaterialPageRoute(builder: (_) =>  DonationDetails(donationModel: argument as DonationModel,));
       case Routing.forgetPassword:
         return MaterialPageRoute(
             builder: (_) => BlocProvider(
