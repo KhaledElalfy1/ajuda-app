@@ -26,7 +26,13 @@
     "spotlight":"Spotlight",
     "donationBalance":"Donation Balance",
     "lastCompagin":"Last Compagin",
-    "donationLocation":"Donation Location"
+    "donationLocation":"Donation Location",
+
+    "favoriteView":"////////////////////////////////////////////////",
+    "donations":"Donations",
+    "search":"Search",
+    "latestFundraisers":"Latest Fundraisers",
+    "saved":"Saved"
 
 
 }

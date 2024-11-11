@@ -26,6 +26,12 @@
     "spotlight":"الأحدث",
     "donationBalance":"الرصيد الحالى",
     "lastCompagin":"أخر التبرعات",
-    "donationLocation":"أماكن التبرعات"
+    "donationLocation":"أماكن التبرعات",
+
+    "favoriteView":"////////////////////////////////////////////////",
+    "donations":"التبرعات",
+    "search":"بحث",
+    "latestFundraisers":"أخر الحملات",
+    "saved":"المحفوظات"
 
 }

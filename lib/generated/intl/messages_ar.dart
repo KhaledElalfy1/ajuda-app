@@ -31,9 +31,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرصيد الحالى"),
         "donationLocation":
             MessageLookupByLibrary.simpleMessage("أماكن التبرعات"),
+        "donations": MessageLookupByLibrary.simpleMessage("التبرعات"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "favoriteView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "helpOthers": MessageLookupByLibrary.simpleMessage("ساعد الآخرين...."),
@@ -41,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "////////////////////////////////////////////////"),
         "iAgreeTo": MessageLookupByLibrary.simpleMessage("موافق على"),
         "lastCompagin": MessageLookupByLibrary.simpleMessage("أخر التبرعات"),
+        "latestFundraisers":
+            MessageLookupByLibrary.simpleMessage("أخر الحملات"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "onboardingDescription": MessageLookupByLibrary.simpleMessage(
             "Ajuda هي منصة للأفراد الذين يرغبون في التبرع لبرامج اجتماعية مختلفة وجمعيات خيرية حول العالم."),
@@ -49,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+        "saved": MessageLookupByLibrary.simpleMessage("المحفوظات"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signInView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),

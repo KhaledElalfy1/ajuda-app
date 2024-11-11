@@ -31,9 +31,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Donation Balance"),
         "donationLocation":
             MessageLookupByLibrary.simpleMessage("Donation Location"),
+        "donations": MessageLookupByLibrary.simpleMessage("Donations"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "favoriteView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "helpOthers": MessageLookupByLibrary.simpleMessage("Help Others...."),
@@ -41,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "////////////////////////////////////////////////"),
         "iAgreeTo": MessageLookupByLibrary.simpleMessage("I agree to the"),
         "lastCompagin": MessageLookupByLibrary.simpleMessage("Last Compagin"),
+        "latestFundraisers":
+            MessageLookupByLibrary.simpleMessage("Latest Fundraisers"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "onboardingDescription": MessageLookupByLibrary.simpleMessage(
             "Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world."),
@@ -49,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "or": MessageLookupByLibrary.simpleMessage("or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "saved": MessageLookupByLibrary.simpleMessage("Saved"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signInView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),
