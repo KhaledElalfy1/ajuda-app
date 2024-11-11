@@ -261,6 +261,96 @@ class S {
   }
 
   /// `////////////////////////////////////////////////`
+  String get restPasswordView {
+    return Intl.message(
+      '////////////////////////////////////////////////',
+      name: 'restPasswordView',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset Password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email for the verification process, we will send 4 digits code to your email.`
+  String get enterEmail {
+    return Intl.message(
+      'Enter your email for the verification process, we will send 4 digits code to your email.',
+      name: 'enterEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter 4 digits code that you received on your email.`
+  String get enterOTP {
+    return Intl.message(
+      'Enter 4 digits code that you received on your email.',
+      name: 'enterOTP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your new password`
+  String get enterYourNewPassword {
+    return Intl.message(
+      'Enter your new password',
+      name: 'enterYourNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get newPassword {
+    return Intl.message(
+      'New Password',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rewrite Password`
+  String get rewritePassword {
+    return Intl.message(
+      'Rewrite Password',
+      name: 'rewritePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `////////////////////////////////////////////////`
   String get homeView {
     return Intl.message(
       '////////////////////////////////////////////////',

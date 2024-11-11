@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "and": MessageLookupByLibrary.simpleMessage("و"),
         "bySiningInYouAccept":
             MessageLookupByLibrary.simpleMessage("بتسجيل الدخول ، فإنك تقبل"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "donationBalance":
             MessageLookupByLibrary.simpleMessage("الرصيد الحالى"),
         "donationLocation":
@@ -35,6 +36,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage(
+            "أدخل بريدك الإلكتروني لعملية التحقق ، سنرسل رمزًا مكونًا من 4 أرقام إلى بريدك الإلكتروني."),
+        "enterOTP": MessageLookupByLibrary.simpleMessage(
+            "أدخل الرمز المكون من 4 أرقام المُرسل على بريدك الإلكتروني."),
+        "enterYourNewPassword":
+            MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور الجديدة"),
         "favoriteView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),
         "forgotPassword":
@@ -47,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "latestFundraisers":
             MessageLookupByLibrary.simpleMessage("أخر الحملات"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "newPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
         "onboardingDescription": MessageLookupByLibrary.simpleMessage(
             "Ajuda هي منصة للأفراد الذين يرغبون في التبرع لبرامج اجتماعية مختلفة وجمعيات خيرية حول العالم."),
         "onboardingTitle":
@@ -54,8 +63,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "restPasswordView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
+        "rewritePassword":
+            MessageLookupByLibrary.simpleMessage("إعادة كتابة كلمة المرور"),
         "saved": MessageLookupByLibrary.simpleMessage("المحفوظات"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "send": MessageLookupByLibrary.simpleMessage("إرسال"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signInView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),

@@ -1,5 +1,6 @@
 import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -17,7 +18,7 @@ class ForgetPasswordForm extends StatelessWidget {
           CustomTextFormFiled(
             controller: ForgetPasswordCubit.get(context)
                 .newPasswordController,
-            hintText: 'New Password',
+            hintText: S.of(context).newPassword,
             validator: ForgetPasswordCubit.get(context).passwordValidator,
             keyboardType: TextInputType.visiblePassword,
             obscureText: true,
@@ -33,7 +34,7 @@ class ForgetPasswordForm extends StatelessWidget {
           CustomTextFormFiled(
             controller: ForgetPasswordCubit.get(context)
                 .reenterPasswordController,
-            hintText: 'rewrite Password',
+            hintText: S.of(context).rewritePassword,
             validator: ForgetPasswordCubit.get(context).passwordValidator,
             keyboardType: TextInputType.visiblePassword,
             obscureText: true,

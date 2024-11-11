@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "and": MessageLookupByLibrary.simpleMessage("and"),
         "bySiningInYouAccept": MessageLookupByLibrary.simpleMessage(
             "By signing in you accept the"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "donationBalance":
             MessageLookupByLibrary.simpleMessage("Donation Balance"),
         "donationLocation":
@@ -35,6 +36,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage(
+            "Enter your email for the verification process, we will send 4 digits code to your email."),
+        "enterOTP": MessageLookupByLibrary.simpleMessage(
+            "Enter 4 digits code that you received on your email."),
+        "enterYourNewPassword":
+            MessageLookupByLibrary.simpleMessage("Enter your new password"),
         "favoriteView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),
         "forgotPassword":
@@ -47,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "latestFundraisers":
             MessageLookupByLibrary.simpleMessage("Latest Fundraisers"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "onboardingDescription": MessageLookupByLibrary.simpleMessage(
             "Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world."),
         "onboardingTitle":
@@ -54,8 +62,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "or": MessageLookupByLibrary.simpleMessage("or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "restPasswordView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
+        "rewritePassword":
+            MessageLookupByLibrary.simpleMessage("Rewrite Password"),
         "saved": MessageLookupByLibrary.simpleMessage("Saved"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signInView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),

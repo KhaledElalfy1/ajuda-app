@@ -4,6 +4,7 @@ import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/features/reset_password/presentation/view/widgets/otp_digits_section.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -16,7 +17,7 @@ class OtpView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Reset Password',
+          S.of(context).resetPassword,
           style: AppFonts.semiBold20,
         ),
       ),
@@ -29,7 +30,7 @@ class OtpView extends StatelessWidget {
                 SvgPicture.asset(AppIcons.iconsMessage),
                 const Gap(45),
                 Text(
-                  "Enter 4 digits code that you received on your email.",
+                  S.of(context).enterOTP,
                   style: AppFonts.medium14,
                 ),
                 const Gap(45),
@@ -47,7 +48,7 @@ class OtpView extends StatelessWidget {
                       }
                     },
                     child: Text(
-                      'Confirm',
+                      S.of(context).confirm,
                       style: AppFonts.semiBold16.copyWith(
                         color: Colors.white,
                       ),
