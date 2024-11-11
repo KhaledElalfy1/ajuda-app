@@ -19,7 +19,14 @@
     "name":"Name",
     "iAgreeTo":"I agree to the",
     "alreadyHaveAccount":"Already have an account?",
-    "youMastAgree":"You must agree with terms of services and privacy policy"
+    "youMastAgree":"You must agree with terms of services and privacy policy",
+
+    "homeView":"////////////////////////////////////////////////",
+    "helpOthers":"Help Others....",
+    "spotlight":"Spotlight",
+    "donationBalance":"Donation Balance",
+    "lastCompagin":"Last Compagin",
+    "donationLocation":"Donation Location"
 
 
 }

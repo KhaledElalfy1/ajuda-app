@@ -19,6 +19,13 @@
     "name":"الاسم",
     "iAgreeTo":"موافق على",
     "alreadyHaveAccount":"لديك حساب بالفعل؟",
-    "youMastAgree":"لابد من الموافقة على الشروط و الاحكام"
+    "youMastAgree":"لابد من الموافقة على الشروط و الاحكام",
+
+    "homeView":"////////////////////////////////////////////////",
+    "helpOthers":"ساعد الآخرين....",
+    "spotlight":"الأحدث",
+    "donationBalance":"الرصيد الحالى",
+    "lastCompagin":"أخر التبرعات",
+    "donationLocation":"أماكن التبرعات"
 
 }

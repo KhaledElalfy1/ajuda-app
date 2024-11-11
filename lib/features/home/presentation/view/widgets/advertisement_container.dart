@@ -6,7 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AdvertisementContainer extends StatelessWidget {
   const AdvertisementContainer({
-    super.key, required this.advertisementModel,
+    super.key,
+    required this.advertisementModel,
   });
 
   final AdvertisementModel advertisementModel;
@@ -27,6 +28,7 @@ class AdvertisementContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0.r),
       ),
       child: Row(
+        textDirection: TextDirection.ltr,
         children: [
           Align(
             alignment: Alignment.bottomLeft,

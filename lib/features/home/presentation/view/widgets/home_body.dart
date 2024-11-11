@@ -4,6 +4,7 @@ import 'package:ajuda/features/home/presentation/view/widgets/custom_carousel_sl
 import 'package:ajuda/features/home/presentation/view/widgets/donation_balance_widget.dart';
 import 'package:ajuda/features/home/presentation/view/widgets/donations_case_card_list_view.dart';
 import 'package:ajuda/features/home/presentation/view/widgets/location_card_list.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -19,7 +20,7 @@ class HomeBody extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: Text(
-              'Spotlight',
+              S.of(context).spotlight,
               style: AppFonts.semiBold16,
             ),
           ),
@@ -30,7 +31,7 @@ class HomeBody extends StatelessWidget {
           SliversGap(20.h),
           SliverToBoxAdapter(
             child: Text(
-              'Latest Campaign',
+              S.of(context).lastCompagin,
               style: AppFonts.semiBold16,
             ),
           ),
@@ -38,7 +39,8 @@ class HomeBody extends StatelessWidget {
           const DonationsCaseCardListView(),
           SliversGap(20.h),
           SliverToBoxAdapter(
-            child: Text('Donation location', style: AppFonts.semiBold16),
+            child: Text(S.of(context).donationLocation,
+                style: AppFonts.semiBold16),
           ),
           SliversGap(10.h),
           const SliverToBoxAdapter(

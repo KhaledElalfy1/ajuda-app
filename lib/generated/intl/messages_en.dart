@@ -27,12 +27,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "and": MessageLookupByLibrary.simpleMessage("and"),
         "bySiningInYouAccept": MessageLookupByLibrary.simpleMessage(
             "By signing in you accept the"),
+        "donationBalance":
+            MessageLookupByLibrary.simpleMessage("Donation Balance"),
+        "donationLocation":
+            MessageLookupByLibrary.simpleMessage("Donation Location"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "helpOthers": MessageLookupByLibrary.simpleMessage("Help Others...."),
+        "homeView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
         "iAgreeTo": MessageLookupByLibrary.simpleMessage("I agree to the"),
+        "lastCompagin": MessageLookupByLibrary.simpleMessage("Last Compagin"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "onboardingDescription": MessageLookupByLibrary.simpleMessage(
             "Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world."),
@@ -49,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "signUpView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),
+        "spotlight": MessageLookupByLibrary.simpleMessage("Spotlight"),
         "startDonating": MessageLookupByLibrary.simpleMessage("Start Donating"),
         "termsOfService":
             MessageLookupByLibrary.simpleMessage("Terms of Service"),

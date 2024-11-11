@@ -27,12 +27,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "and": MessageLookupByLibrary.simpleMessage("و"),
         "bySiningInYouAccept":
             MessageLookupByLibrary.simpleMessage("بتسجيل الدخول ، فإنك تقبل"),
+        "donationBalance":
+            MessageLookupByLibrary.simpleMessage("الرصيد الحالى"),
+        "donationLocation":
+            MessageLookupByLibrary.simpleMessage("أماكن التبرعات"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "helpOthers": MessageLookupByLibrary.simpleMessage("ساعد الآخرين...."),
+        "homeView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
         "iAgreeTo": MessageLookupByLibrary.simpleMessage("موافق على"),
+        "lastCompagin": MessageLookupByLibrary.simpleMessage("أخر التبرعات"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "onboardingDescription": MessageLookupByLibrary.simpleMessage(
             "Ajuda هي منصة للأفراد الذين يرغبون في التبرع لبرامج اجتماعية مختلفة وجمعيات خيرية حول العالم."),
@@ -49,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "signUpView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),
+        "spotlight": MessageLookupByLibrary.simpleMessage("الأحدث"),
         "startDonating": MessageLookupByLibrary.simpleMessage("ابدأ التبرع"),
         "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
         "youMastAgree": MessageLookupByLibrary.simpleMessage(

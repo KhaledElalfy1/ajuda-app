@@ -2,6 +2,7 @@ import 'package:ajuda/core/helpers/extentions.dart';
 import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -19,7 +20,7 @@ class HomeHeader extends StatelessWidget {
             height: 40.h,
             child: CustomTextFormFiled(
               controller: TextEditingController(),
-              hintText: 'Help others ...',
+              hintText: S.of(context).helpOthers,
               keyboardType: TextInputType.text,
               icon: IconButton(
                 onPressed: () {},
