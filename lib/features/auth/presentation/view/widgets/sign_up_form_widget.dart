@@ -5,10 +5,12 @@ import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
 import 'package:ajuda/features/auth/presentation/view/widgets/agree_with_terms_section.dart';
 import 'package:ajuda/features/auth/presentation/view_model/sign_up_cubit/sign_up_cubit.dart';
 import 'package:ajuda/features/auth/presentation/view_model/sign_up_cubit/sign_up_state.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class SignUpFormWidget extends StatelessWidget {
   const SignUpFormWidget({super.key});
 
@@ -20,25 +22,25 @@ class SignUpFormWidget extends StatelessWidget {
         children: [
           CustomTextFormFiled(
             controller: SignUpCubit.get(context).nameController,
-            hintText: "Name",
+            hintText: S.of(context).name,
             validator: SignUpCubit.get(context).nameValidator,
             keyboardType: TextInputType.name,
           ),
-           Gap(15.h),
+          Gap(15.h),
           CustomTextFormFiled(
             controller: SignUpCubit.get(context).emailController,
             validator: SignUpCubit.get(context).emailValidator,
-            hintText: 'Email',
+            hintText: S.of(context).email,
             keyboardType: TextInputType.emailAddress,
           ),
-           Gap(15.h),
+          Gap(15.h),
           BlocBuilder<SignUpCubit, SignUpState>(
             builder: (context, state) {
               return CustomTextFormFiled(
                 controller: SignUpCubit.get(context).passwordController,
                 validator: SignUpCubit.get(context).passwordValidator,
                 obscureText: SignUpCubit.get(context).isPasswordVisible,
-                hintText: 'Password',
+                hintText: S.of(context).password,
                 keyboardType: TextInputType.visiblePassword,
                 icon: IconButton(
                   onPressed: SignUpCubit.get(context).togglePasswordVisibility,
@@ -51,7 +53,7 @@ class SignUpFormWidget extends StatelessWidget {
             },
           ),
           const AgreeWithTermsSection(),
-           Gap(30.h),
+          Gap(30.h),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
@@ -59,9 +61,8 @@ class SignUpFormWidget extends StatelessWidget {
                 if (SignUpCubit.get(context).formKey.currentState!.validate()) {
                   if (!SignUpCubit.get(context).isAgreeWithTerms) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text(
-                            'You must agree with terms of services and privacy policy'),
+                      SnackBar(
+                        content: Text(S.of(context).youMastAgree),
                       ),
                     );
                   }
@@ -70,7 +71,7 @@ class SignUpFormWidget extends StatelessWidget {
                 }
               },
               child: Text(
-                'Sign up',
+                S.of(context).signUp,
                 style: AppFonts.semiBold16.copyWith(
                   color: Colors.white,
                 ),

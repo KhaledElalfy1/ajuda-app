@@ -1,5 +1,6 @@
 import 'package:ajuda/core/helpers/extentions.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SavedDonationHeader extends StatelessWidget {
@@ -24,7 +25,7 @@ class SavedDonationHeader extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0),
           child: Text(
-            "saved",
+            S.of(context).saved,
             style: AppFonts.semiBold20,
           ),
         ),
