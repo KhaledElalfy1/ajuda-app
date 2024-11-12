@@ -33,7 +33,7 @@ ThemeData appTheme() {
       ),
       border: borderDecoration(),
       enabledBorder: borderDecoration(),
-      focusedBorder: borderDecoration(),
+      focusedBorder: borderDecoration(color:const Color(0xff1C8679)),
       errorBorder: borderDecoration(color: Colors.red),
     ),
   );
