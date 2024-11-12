@@ -1,1 +1,51 @@
-{}
+{
+    "onboardingTitle":"Donation made Easy",
+    "onboardingDescription":"Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world.",
+    "startDonating":"Start Donating",
+    "signInView":"////////////////////////////////////////////////",
+    "email":"Email",
+    "password":"Password",
+    "forgotPassword":"Forgot Password?",
+    "signInWithGoogle":"Sign in with Google",
+    "signIn":"Sign In",
+    "dontHaveAccount":"Don't have an account?",
+    "bySiningInYouAccept":"By signing in you accept the",
+    "termsOfService":"Terms of Service",
+    "and":"and",
+    "privacyPolicy":"Privacy Policy",
+    "or":"or",
+    "signUp":"Sign Up",
+    "signUpView":"////////////////////////////////////////////////",
+    "name":"Name",
+    "iAgreeTo":"I agree to the",
+    "alreadyHaveAccount":"Already have an account?",
+    "youMastAgree":"You must agree with terms of services and privacy policy",
+
+
+
+    "restPasswordView":"////////////////////////////////////////////////",
+    "resetPassword":"Reset Password",
+    "enterEmail":"Enter your email for the verification process, we will send 4 digits code to your email.",
+    "send":"Send",
+    "enterOTP":"Enter 4 digits code that you received on your email.",
+    "confirm":"Confirm",
+    "enterYourNewPassword":"Enter your new password",
+    "newPassword":"New Password",
+    "rewritePassword":"Rewrite Password",
+
+
+    "homeView":"////////////////////////////////////////////////",
+    "helpOthers":"Help Others....",
+    "spotlight":"Spotlight",
+    "donationBalance":"Donation Balance",
+    "lastCompagin":"Last Compagin",
+    "donationLocation":"Donation Location",
+
+    "favoriteView":"////////////////////////////////////////////////",
+    "donations":"Donations",
+    "search":"Search",
+    "latestFundraisers":"Latest Fundraisers",
+    "saved":"Saved"
+
+
+}

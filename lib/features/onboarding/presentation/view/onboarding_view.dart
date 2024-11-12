@@ -6,8 +6,11 @@ import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/core/utils/app_images.dart';
 import 'package:ajuda/core/services/get_it.dart';
 import 'package:ajuda/core/widgets/custom_button.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});
@@ -20,19 +23,19 @@ class OnboardingView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             children: [
-              const SizedBox(height: 20),
+              Gap(20.h),
               SvgPicture.asset(AppIcons.iconsAppLogo),
-              const SizedBox(height: 110),
+              Gap(110.h),
               Image.asset(
                 AppImages.imagesOnboarding,
                 width: 327,
                 height: 205,
               ),
-              const SizedBox(height: 50),
+              Gap(50.h),
               Align(
                 alignment: AlignmentDirectional.topStart,
                 child: Text(
-                  'Donation made Easy',
+                  S.of(context).onboardingTitle,
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
@@ -40,9 +43,9 @@ class OnboardingView extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 8),
+              Gap(8.h),
               Text(
-                'Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world.',
+                S.of(context).onboardingDescription,
                 style: TextStyle(
                   fontSize: 16,
                   color: AppColors.black,
@@ -50,15 +53,15 @@ class OnboardingView extends StatelessWidget {
               ),
               const Expanded(child: SizedBox()),
               SizedBox(
-                width: 165,
+                width: 165.w,
                 child: CustomButton(
-                  text: 'Start donating',
+                  text: S.of(context).startDonating,
                   onPressed: () async {
-                  await  getIt<CacheHelper>()
+                    await getIt<CacheHelper>()
                         .saveData(key: CacheKeys.isFirstTime, value: true);
-                   if(context.mounted){
-                     context.pushReplacementNamed(Routing.login);
-                   }
+                    if (context.mounted) {
+                      context.pushReplacementNamed(Routing.login);
+                    }
                   },
                   style: const TextStyle(
                     fontSize: 14,
@@ -67,7 +70,7 @@ class OnboardingView extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              Gap(20.h),
             ],
           ),
         ),

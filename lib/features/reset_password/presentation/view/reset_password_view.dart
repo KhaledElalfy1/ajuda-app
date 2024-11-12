@@ -4,6 +4,7 @@ import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/features/reset_password/presentation/view/widgets/forget_password_form.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -16,7 +17,7 @@ class ResetPasswordView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Reset Password',
+          S.of(context).resetPassword,
           style: AppFonts.semiBold20,
         ),
       ),
@@ -29,7 +30,7 @@ class ResetPasswordView extends StatelessWidget {
                 SvgPicture.asset(AppIcons.iconsLock),
                 const Gap(45),
                 Text(
-                  "Enter your email for the verification process, we will send 4 digits code to your email.",
+                  S.of(context).enterYourNewPassword,
                   style: AppFonts.medium14,
                 ),
                 const Gap(45),

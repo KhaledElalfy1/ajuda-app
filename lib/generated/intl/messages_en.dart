@@ -21,5 +21,68 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "alreadyHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "and": MessageLookupByLibrary.simpleMessage("and"),
+        "bySiningInYouAccept": MessageLookupByLibrary.simpleMessage(
+            "By signing in you accept the"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "donationBalance":
+            MessageLookupByLibrary.simpleMessage("Donation Balance"),
+        "donationLocation":
+            MessageLookupByLibrary.simpleMessage("Donation Location"),
+        "donations": MessageLookupByLibrary.simpleMessage("Donations"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage(
+            "Enter your email for the verification process, we will send 4 digits code to your email."),
+        "enterOTP": MessageLookupByLibrary.simpleMessage(
+            "Enter 4 digits code that you received on your email."),
+        "enterYourNewPassword":
+            MessageLookupByLibrary.simpleMessage("Enter your new password"),
+        "favoriteView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "helpOthers": MessageLookupByLibrary.simpleMessage("Help Others...."),
+        "homeView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
+        "iAgreeTo": MessageLookupByLibrary.simpleMessage("I agree to the"),
+        "lastCompagin": MessageLookupByLibrary.simpleMessage("Last Compagin"),
+        "latestFundraisers":
+            MessageLookupByLibrary.simpleMessage("Latest Fundraisers"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
+        "onboardingDescription": MessageLookupByLibrary.simpleMessage(
+            "Ajuda is a platform for philanthropists to make donations to various social programmes and charities around the world."),
+        "onboardingTitle":
+            MessageLookupByLibrary.simpleMessage("Donation made Easy"),
+        "or": MessageLookupByLibrary.simpleMessage("or"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "restPasswordView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
+        "rewritePassword":
+            MessageLookupByLibrary.simpleMessage("Rewrite Password"),
+        "saved": MessageLookupByLibrary.simpleMessage("Saved"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "send": MessageLookupByLibrary.simpleMessage("Send"),
+        "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
+        "signInView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
+        "signInWithGoogle":
+            MessageLookupByLibrary.simpleMessage("Sign in with Google"),
+        "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "signUpView": MessageLookupByLibrary.simpleMessage(
+            "////////////////////////////////////////////////"),
+        "spotlight": MessageLookupByLibrary.simpleMessage("Spotlight"),
+        "startDonating": MessageLookupByLibrary.simpleMessage("Start Donating"),
+        "termsOfService":
+            MessageLookupByLibrary.simpleMessage("Terms of Service"),
+        "youMastAgree": MessageLookupByLibrary.simpleMessage(
+            "You must agree with terms of services and privacy policy")
+      };
 }

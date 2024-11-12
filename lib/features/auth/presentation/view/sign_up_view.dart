@@ -3,6 +3,7 @@ import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/widgets/custom_app_bar.dart';
 import 'package:ajuda/features/auth/presentation/view/widgets/sign_in_with_google_button.dart';
 import 'package:ajuda/features/auth/presentation/view/widgets/sign_up_form_widget.dart';
+import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -24,7 +25,7 @@ class SignUpView extends StatelessWidget {
                 const SignInWithGoogleButton(),
                  Gap(25.h),
                 Text(
-                  'or',
+                  S.of(context).or,
                   style: AppFonts.medium16.copyWith(
                     color: AppColors.greyColor,
                   ),
@@ -34,7 +35,7 @@ class SignUpView extends StatelessWidget {
                  Gap(30.h),
                 Text.rich(
                   TextSpan(
-                    text: 'Already have an account? ',
+                    text: '${S.of(context).alreadyHaveAccount} ',
                     style: AppFonts.regular14.copyWith(
                       color: AppColors.greyColor,
                     ),
@@ -44,7 +45,7 @@ class SignUpView extends StatelessWidget {
                           ..onTap = () {
                             Navigator.pop(context);
                           },
-                        text: 'Sign in',
+                        text: S.of(context).signIn,
                         style: AppFonts.regular16.copyWith(
                           color: AppColors.black,
                           fontWeight: FontWeight.w600,
