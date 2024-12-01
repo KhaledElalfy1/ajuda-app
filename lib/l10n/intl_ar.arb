@@ -46,6 +46,15 @@
     "donations":"التبرعات",
     "search":"بحث",
     "latestFundraisers":"أخر الحملات",
-    "saved":"المحفوظات"
+    "saved":"المحفوظات",
+
+    "profileView":"///////////////////////////////////////////////////",
+    "account":"الحساب",
+    "editProfile":"تعديل الحساب",
+    "logOut":"تسجيل الخروج",
+    "myDonation":"تبرعاتى",
+    "donationReminder":"تذكير للتبرع",
+    "changePassword":"تغير كلمة المرور",
+    "setting":"الأعدادات"
 
 }

@@ -459,6 +459,86 @@ class S {
       args: [],
     );
   }
+
+  /// `///////////////////////////////////////////////////`
+  String get profileView {
+    return Intl.message(
+      '///////////////////////////////////////////////////',
+      name: 'profileView',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account`
+  String get account {
+    return Intl.message(
+      'Account',
+      name: 'account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Profile`
+  String get editProfile {
+    return Intl.message(
+      'Edit Profile',
+      name: 'editProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log Out`
+  String get logOut {
+    return Intl.message(
+      'Log Out',
+      name: 'logOut',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Donation`
+  String get myDonation {
+    return Intl.message(
+      'My Donation',
+      name: 'myDonation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Donation Reminder`
+  String get donationReminder {
+    return Intl.message(
+      'Donation Reminder',
+      name: 'donationReminder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Password`
+  String get changePassword {
+    return Intl.message(
+      'Change Password',
+      name: 'changePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting`
+  String get setting {
+    return Intl.message(
+      'Setting',
+      name: 'setting',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

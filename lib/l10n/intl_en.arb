@@ -45,7 +45,16 @@
     "donations":"Donations",
     "search":"Search",
     "latestFundraisers":"Latest Fundraisers",
-    "saved":"Saved"
+    "saved":"Saved",
+
+    "profileView":"///////////////////////////////////////////////////",
+    "account":"Account",
+    "editProfile":"Edit Profile",
+    "logOut":"Log Out",
+    "myDonation":"My Donation",
+    "donationReminder":"Donation Reminder",
+    "changePassword":"Change Password",
+    "setting":"Setting"
 
 
 }
