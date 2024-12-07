@@ -22,19 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account": MessageLookupByLibrary.simpleMessage("الحساب"),
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟"),
         "and": MessageLookupByLibrary.simpleMessage("و"),
         "bySiningInYouAccept":
             MessageLookupByLibrary.simpleMessage("بتسجيل الدخول ، فإنك تقبل"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("تغير كلمة المرور"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "donationBalance":
             MessageLookupByLibrary.simpleMessage("الرصيد الحالى"),
         "donationLocation":
             MessageLookupByLibrary.simpleMessage("أماكن التبرعات"),
+        "donationReminder":
+            MessageLookupByLibrary.simpleMessage("تذكير للتبرع"),
         "donations": MessageLookupByLibrary.simpleMessage("التبرعات"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+        "editProfile": MessageLookupByLibrary.simpleMessage("تعديل الحساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "enterEmail": MessageLookupByLibrary.simpleMessage(
             "أدخل بريدك الإلكتروني لعملية التحقق ، سنرسل رمزًا مكونًا من 4 أرقام إلى بريدك الإلكتروني."),
@@ -53,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "lastCompagin": MessageLookupByLibrary.simpleMessage("أخر التبرعات"),
         "latestFundraisers":
             MessageLookupByLibrary.simpleMessage("أخر الحملات"),
+        "logOut": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "myDonation": MessageLookupByLibrary.simpleMessage("تبرعاتى"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
@@ -63,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+        "profileView": MessageLookupByLibrary.simpleMessage(
+            "///////////////////////////////////////////////////"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "restPasswordView": MessageLookupByLibrary.simpleMessage(
@@ -72,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "saved": MessageLookupByLibrary.simpleMessage("المحفوظات"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "send": MessageLookupByLibrary.simpleMessage("إرسال"),
+        "setting": MessageLookupByLibrary.simpleMessage("الأعدادات"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signInView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),

@@ -22,19 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account": MessageLookupByLibrary.simpleMessage("Account"),
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "and": MessageLookupByLibrary.simpleMessage("and"),
         "bySiningInYouAccept": MessageLookupByLibrary.simpleMessage(
             "By signing in you accept the"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("Change Password"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "donationBalance":
             MessageLookupByLibrary.simpleMessage("Donation Balance"),
         "donationLocation":
             MessageLookupByLibrary.simpleMessage("Donation Location"),
+        "donationReminder":
+            MessageLookupByLibrary.simpleMessage("Donation Reminder"),
         "donations": MessageLookupByLibrary.simpleMessage("Donations"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "enterEmail": MessageLookupByLibrary.simpleMessage(
             "Enter your email for the verification process, we will send 4 digits code to your email."),
@@ -53,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "lastCompagin": MessageLookupByLibrary.simpleMessage("Last Compagin"),
         "latestFundraisers":
             MessageLookupByLibrary.simpleMessage("Latest Fundraisers"),
+        "logOut": MessageLookupByLibrary.simpleMessage("Log Out"),
+        "myDonation": MessageLookupByLibrary.simpleMessage("My Donation"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "onboardingDescription": MessageLookupByLibrary.simpleMessage(
@@ -62,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "or": MessageLookupByLibrary.simpleMessage("or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "profileView": MessageLookupByLibrary.simpleMessage(
+            "///////////////////////////////////////////////////"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "restPasswordView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),
@@ -70,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "saved": MessageLookupByLibrary.simpleMessage("Saved"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
+        "setting": MessageLookupByLibrary.simpleMessage("Setting"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signInView": MessageLookupByLibrary.simpleMessage(
             "////////////////////////////////////////////////"),

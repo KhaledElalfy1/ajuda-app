@@ -33,5 +33,9 @@ class AppImages {
   /// Assets for imagesSplashIcon
   /// assets/images/splash_icon.png
   static const String imagesSplashIcon = "assets/images/splash_icon.png";
+
+  /// Assets for imagesPerson
+  /// assets/images/Person.png
+  static const String imagesPerson = "assets/images/person.png";
 }
 

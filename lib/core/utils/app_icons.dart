@@ -81,5 +81,17 @@ class AppIcons {
    /// Assets for iconsLocation
   /// assets/icons/location.svg
   static const String iconsLocation = "assets/icons/location.svg";
+
+   /// Assets for iconsHeart
+  /// assets/icons/heart.svg
+  static const String iconsHeart = "assets/icons/heart.svg";
+
+   /// Assets for iconsBell
+  /// assets/icons/bell.svg
+  static const String iconsBell = "assets/icons/bell.svg";
+
+   /// Assets for iconsPerson
+  /// assets/icons/person.svg
+  static const String iconsPerson = "assets/icons/person.svg";
 }
 
