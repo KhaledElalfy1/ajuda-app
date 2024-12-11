@@ -15,9 +15,9 @@ class AuthRepoImpl extends AuthRepo {
   Future<Either<String, String>> signIn(
       {required SignInUserInputModel signInUserInputModel}) async {
     try {
-      final response =
-          await apiConsumer.post(ApiKeys.signIn, body: signInUserInputModel.toJson());
-      final data = AuthModel.fromJson(response);
+      final response = await apiConsumer.post(ApiKeys.signIn,
+          body: signInUserInputModel.toJson());
+      final data = AuthModel.fromJson(response.data);
       log("the response from sign in repo impl is $data");
       return right(data.userName);
     } catch (e) {
