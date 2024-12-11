@@ -1,10 +1,13 @@
 import 'package:ajuda/core/helpers/extentions.dart';
+import 'package:ajuda/features/auth/data/repo/auth_repo.dart';
+import 'package:ajuda/features/auth/model/sign_in_user_input_model.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginCubit extends Cubit<LoginState> {
-  LoginCubit() : super(LoginInitial());
+  LoginCubit(this.authRepo) : super(LoginInitial());
+  final AuthRepo authRepo;
   static LoginCubit get(BuildContext context) => BlocProvider.of(context);
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -12,29 +15,43 @@ class LoginCubit extends Cubit<LoginState> {
   IconData icon = Icons.visibility_off;
   bool isPasswordVisible = true;
 
+  Future signIn() async {
+    emit(LoginLoading());
+    final result = await authRepo.signIn(
+      signInUserInputModel: SignInUserInputModel(
+        email: emailController.text,
+        password: passwordController.text,
+      ),
+    );
+    result.fold(
+      (l) => emit(LoginFailure(l)),
+      (r) => emit(LoginSuccess()),
+    );
+  }
+
   String? emailValidator(String? value) {
-    if (value==null||!value.isValidEmail) {
+    if (value == null || !value.isValidEmail) {
       return 'Invalid email';
     }
     return null;
   }
 
-String? passwordValidator(String? value) {
-  if (value == null || value.isEmpty) {
-    return 'Password is required';
-  } else if (value.length < 8) {
-    return 'Password must be at least 8 characters';
-  } else if (!value.isValidPassword) {
-    return 'Invalid password format';
+  String? passwordValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Password is required';
+    } else if (value.length < 8) {
+      return 'Password must be at least 8 characters';
+    } else if (!value.isValidPassword) {
+      return 'Invalid password format';
+    }
+    return null;
   }
-  return null;
-}
 
-void togglePasswordVisibility() {
-  isPasswordVisible = !isPasswordVisible;
-  icon = isPasswordVisible ? Icons.visibility_off : Icons.visibility;
-  emit(ChangeVisibility());
-}
+  void togglePasswordVisibility() {
+    isPasswordVisible = !isPasswordVisible;
+    icon = isPasswordVisible ? Icons.visibility_off : Icons.visibility;
+    emit(ChangeVisibility());
+  }
 
   @override
   Future<void> close() {
