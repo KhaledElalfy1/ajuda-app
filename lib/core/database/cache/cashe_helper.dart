@@ -1,3 +1,4 @@
+import 'package:ajuda/core/database/cache/cache_keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CacheHelper {
@@ -31,8 +32,4 @@ class CacheHelper {
   }
 }
 
-abstract class CacheKeys {
-  static const String isFirstTime = 'isFirstTime';
-  static const String currentLanguageCode = 'currentLanguageCode';
-  static const String currentLanguage = 'currentLanguage';
-}
+
