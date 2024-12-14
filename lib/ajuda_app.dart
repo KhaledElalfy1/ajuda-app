@@ -16,30 +16,43 @@ class AjudaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(375, 812),
-        builder: (_, child) {
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            localizationsDelegates: const [
-              S.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: S.delegate.supportedLocales,
-            locale: const Locale('en'),
-            initialRoute: initRouting(),
-            title: 'Ajuda',
-            theme: appTheme(),
-            onGenerateRoute: AppRouters().generateRoute,
-          );
-        });
+      designSize: const Size(375, 812),
+      builder: (_, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          localizationsDelegates: const [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
+          locale: const Locale('en'),
+          title: 'Ajuda',
+          theme: appTheme(),
+          home: FutureBuilder(
+            future: initRouting(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Navigator(
+                  onGenerateRoute: AppRouters().generateRoute,
+                  initialRoute: snapshot.data,
+                );
+              }
+              return CircularProgressIndicator();
+            },
+          ),
+        );
+      },
+    );
   }
 
-  String initRouting() {
-    if (SecureStorage.instance.getData(key: CacheKeys.token) != null) {
+  Future<String> initRouting() async {
+    final token = await SecureStorage.instance.getData(key: CacheKeys.token);
+    bool isFirstTime = getIt<CacheHelper>().getData(key: CacheKeys.isFirstTime);
+    if (token != null) {
       return Routing.home;
-    } else if (getIt<CacheHelper>().getData(key: CacheKeys.isFirstTime)) {
+    } else if (isFirstTime) {
       return Routing.login;
     }
     return Routing.onboarding;
