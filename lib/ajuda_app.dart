@@ -1,4 +1,6 @@
+import 'package:ajuda/core/database/cache/cache_keys.dart';
 import 'package:ajuda/core/database/cache/cashe_helper.dart';
+import 'package:ajuda/core/database/cache/secure_storage.dart';
 import 'package:ajuda/core/routers/app_routers.dart';
 import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/themes/themes.dart';
@@ -35,8 +37,10 @@ class AjudaApp extends StatelessWidget {
   }
 
   String initRouting() {
-    if (getIt<CacheHelper>().getData(key: CacheKeys.isFirstTime)) {
-      return Routing.onboarding;
+    if (SecureStorage.instance.getData(key: CacheKeys.token) != null) {
+      return Routing.home;
+    } else if (getIt<CacheHelper>().getData(key: CacheKeys.isFirstTime)) {
+      return Routing.login;
     }
     return Routing.onboarding;
   }
