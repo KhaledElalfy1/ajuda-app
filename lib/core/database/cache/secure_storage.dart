@@ -14,7 +14,7 @@ class SecureStorage {
     await _flutterSecureStorage.write(key: key, value: data);
   }
 
-  Future<String?> getData({required String key}) async {
+  Future<String?>? getData({required String key}) async {
     return await _flutterSecureStorage.read(key: key);
   }
 }
