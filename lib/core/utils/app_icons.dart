@@ -93,5 +93,9 @@ class AppIcons {
    /// Assets for iconsPerson
   /// assets/icons/person.svg
   static const String iconsPerson = "assets/icons/person.svg";
+
+   /// Assets for iconsSplash
+  /// assets/icons/splash.svg
+  static const String iconsSplash = "assets/icons/splash.svg";
 }
 
