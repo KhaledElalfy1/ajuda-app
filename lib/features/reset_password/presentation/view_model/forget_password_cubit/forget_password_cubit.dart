@@ -24,6 +24,21 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
   GlobalKey<FormState> emailFormKey = GlobalKey<FormState>();
   GlobalKey<FormState> otpFormKey = GlobalKey<FormState>();
   GlobalKey<FormState> newPasswordFormKey = GlobalKey<FormState>();
+
+  void sendOTPToEmail() async {
+    emit(ForgetPasswordSendOTPLoading());
+    final result =
+        await forgetPasswordRepo.sendOTPToEmail(email: emailController.text);
+    result.fold(
+      (eMessage) => emit(
+        ForgetPasswordSendOTPFailure(eMessage: eMessage),
+      ),
+      (sMessage) => emit(
+        ForgetPasswordSendOTPSuccess(sMessage: sMessage),
+      ),
+    );
+  }
+
   void nextFiled(String value, FocusNode focusNode) {
     if (value.length == 1) {
       focusNode.requestFocus();
