@@ -1,11 +1,12 @@
 import 'package:ajuda/core/helpers/extentions.dart';
+import 'package:ajuda/features/reset_password/data/repo/forget_password_repo.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
-  ForgetPasswordCubit() : super(ForgetPasswordInitial());
-
+  ForgetPasswordCubit(this.forgetPasswordRepo) : super(ForgetPasswordInitial());
+  final ForgetPasswordRepo forgetPasswordRepo;
   static ForgetPasswordCubit get(context) => BlocProvider.of(context);
   TextEditingController emailController = TextEditingController();
   TextEditingController newPasswordController = TextEditingController();
