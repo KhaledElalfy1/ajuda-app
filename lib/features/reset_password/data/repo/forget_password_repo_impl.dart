@@ -10,9 +10,16 @@ class ForgetPasswordRepoImpl extends ForgetPasswordRepo {
   ForgetPasswordRepoImpl({required this.apiConsumer});
   @override
   Future<Either<String, String>> checkOTP(
-      {required String email, required String otp}) {
-    // TODO: implement checkOTP
-    throw UnimplementedError();
+      {required String email, required String otp}) async {
+    try {
+      Response response = await apiConsumer.post(ApiKeys.checkOTP, body: {
+        'email': email,
+        'otp': otp,
+      });
+      return right("otp is correct");
+    } on DioException catch (e) {
+      return left(e.message!);
+    }
   }
 
   @override
@@ -32,7 +39,7 @@ class ForgetPasswordRepoImpl extends ForgetPasswordRepo {
       String message = response.data['message'];
       return right(message);
     } on DioException catch (e) {
-      return left(e.message??'some error happen'); // TODO change this
+      return left(e.message ?? 'some error happen'); // TODO change this
     }
   }
 }

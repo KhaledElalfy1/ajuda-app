@@ -39,6 +39,25 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
     );
   }
 
+  void checkOTP() async {
+    emit(ForgetPasswordCheckOTPLoading());
+    String otp = otpController1.text +
+        otpController2.text +
+        otpController3.text +
+        otpController4.text;
+    final result = await forgetPasswordRepo.checkOTP(
+        email: emailController.text, otp: otp);
+
+    result.fold(
+      (eMessage) => emit(
+        ForgetPasswordCheckOTPFailure(eMessage: eMessage),
+      ),
+      (sMessage) => emit(
+        ForgetPasswordCheckOTPSuccess(sMessage: sMessage),
+      ),
+    );
+  }
+
   void nextFiled(String value, FocusNode focusNode) {
     if (value.length == 1) {
       focusNode.requestFocus();

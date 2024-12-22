@@ -15,3 +15,17 @@ final class ForgetPasswordSendOTPFailure extends ForgetPasswordState {
 
   ForgetPasswordSendOTPFailure({required this.eMessage});
 }
+
+final class ForgetPasswordCheckOTPLoading extends ForgetPasswordState {}
+
+final class ForgetPasswordCheckOTPSuccess extends ForgetPasswordState {
+  final String sMessage;
+
+  ForgetPasswordCheckOTPSuccess({required this.sMessage});
+}
+
+final class ForgetPasswordCheckOTPFailure extends ForgetPasswordState {
+  final String eMessage;
+
+  ForgetPasswordCheckOTPFailure({required this.eMessage});
+}
