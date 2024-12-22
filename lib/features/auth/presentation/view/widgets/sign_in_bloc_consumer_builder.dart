@@ -1,13 +1,12 @@
 import 'package:ajuda/core/helpers/extentions.dart';
 import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
+import 'package:ajuda/core/widgets/custom_auth_loading.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_state.dart';
 import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lottie/lottie.dart';
-
 class SignInBlocConsumerBuilder extends StatelessWidget {
   const SignInBlocConsumerBuilder({
     super.key,
@@ -31,12 +30,7 @@ class SignInBlocConsumerBuilder extends StatelessWidget {
               }
             },
             child: state is LoginLoading
-                ? Center(
-                    child: LottieBuilder.asset(
-                      'assets/animation/loading.json',
-                      height: 65,
-                    ),
-                  )
+                ?const CustomAuthLoading()
                 : Text(
                     S.of(context).signIn,
                     style: AppFonts.semiBold16.copyWith(
