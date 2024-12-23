@@ -11,8 +11,8 @@ import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SendEmailBlocConsumerBuilder extends StatelessWidget {
-  const SendEmailBlocConsumerBuilder({
+class ResetPasswordBlocConsumer extends StatelessWidget {
+  const ResetPasswordBlocConsumer({
     super.key,
   });
 
@@ -20,10 +20,10 @@ class SendEmailBlocConsumerBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<ForgetPasswordCubit, ForgetPasswordState>(
       listener: (context, state) {
-        if (state is ForgetPasswordSendOTPSuccess) {
+        if (state is ForgetPasswordResetPasswordSuccess) {
           showToast(message: state.sMessage);
-          context.pushNamed(Routing.enterOTP);
-        } else if (state is ForgetPasswordSendOTPFailure) {
+          context.pushReplacementNamed(Routing.login);
+        } else if (state is ForgetPasswordResetPasswordFailure) {
           showToast(message: state.eMessage);
           log(state.eMessage);
         }
@@ -34,16 +34,16 @@ class SendEmailBlocConsumerBuilder extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {
               if (ForgetPasswordCubit.get(context)
-                  .emailFormKey
+                  .newPasswordFormKey
                   .currentState!
                   .validate()) {
-                ForgetPasswordCubit.get(context).sendOTPToEmail();
+                ForgetPasswordCubit.get(context).resetPassword();
               }
             },
-            child: state is ForgetPasswordSendOTPLoading
+            child: state is ForgetPasswordResetPasswordLoading
                 ? const CustomAuthLoading()
                 : Text(
-                    S.of(context).send,
+                    S.of(context).confirm,
                     style: AppFonts.semiBold16.copyWith(
                       color: Colors.white,
                     ),

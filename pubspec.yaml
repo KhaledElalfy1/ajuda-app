@@ -42,6 +42,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   flutter_secure_storage: ^9.2.2
   flutter_svg: ^2.0.10+1
+  fluttertoast: ^8.2.10
   gap: ^3.0.1
   get_it: ^8.0.0
   google_fonts: ^6.2.1

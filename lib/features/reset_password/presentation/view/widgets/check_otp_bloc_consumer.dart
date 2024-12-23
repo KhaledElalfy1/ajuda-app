@@ -1,9 +1,9 @@
-
 import 'dart:developer';
 
 import 'package:ajuda/core/helpers/extentions.dart';
 import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
+import 'package:ajuda/core/widgets/custom_app_toast.dart';
 import 'package:ajuda/core/widgets/custom_auth_loading.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_state.dart';
@@ -21,8 +21,10 @@ class CheckOTPBlocConsumer extends StatelessWidget {
     return BlocConsumer<ForgetPasswordCubit, ForgetPasswordState>(
       listener: (context, state) {
         if (state is ForgetPasswordCheckOTPSuccess) {
+          showToast(message: state.sMessage);
           context.pushNamed(Routing.restPassword);
         } else if (state is ForgetPasswordCheckOTPFailure) {
+          showToast(message: state.eMessage);
           log(state.eMessage);
         }
       },
