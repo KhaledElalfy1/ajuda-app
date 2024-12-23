@@ -1,7 +1,7 @@
 import 'package:ajuda/features/reset_password/presentation/view/widgets/otp_text_from_filed.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OTPDigitsSection extends StatelessWidget {
   const OTPDigitsSection({
@@ -15,49 +15,33 @@ class OTPDigitsSection extends StatelessWidget {
       child: Form(
         key: ForgetPasswordCubit.get(context).otpFormKey,
         child: Row(
-          children: [
-            Expanded(
-              child: OtpTextFromFiled(
-                controller: ForgetPasswordCubit.get(context).otpController1,
-                focusNode: ForgetPasswordCubit.get(context).focusNode1,
-                validator: ForgetPasswordCubit.get(context).numberValidator,
-                autoFocus: true,
-                onChanged: (p0) => ForgetPasswordCubit.get(context)
-                    .nextFiled(p0, ForgetPasswordCubit.get(context).focusNode2),
+          children: List.generate(
+            6,
+            (index) => Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5.w),
+                child: OtpTextFromFiled(
+                  autoFocus: index == 0,
+                  validator: ForgetPasswordCubit.get(context).numberValidator,
+                  controller:
+                      ForgetPasswordCubit.get(context).otpControllers[index],
+                  focusNode:
+                      ForgetPasswordCubit.get(context).otpFocusNode[index],
+                  onChanged: (value) {
+                    index == 5
+                        ? ForgetPasswordCubit.get(context)
+                            .otpFocusNode[index]
+                            .unfocus()
+                        : ForgetPasswordCubit.get(context).nextFiled(
+                            value,
+                            ForgetPasswordCubit.get(context)
+                                .otpFocusNode[index + 1],
+                          );
+                  },
+                ),
               ),
             ),
-            const Gap(10),
-            Expanded(
-              child: OtpTextFromFiled(
-                controller: ForgetPasswordCubit.get(context).otpController2,
-                focusNode: ForgetPasswordCubit.get(context).focusNode2,
-                validator: ForgetPasswordCubit.get(context).numberValidator,
-                onChanged: (p0) => ForgetPasswordCubit.get(context)
-                    .nextFiled(p0, ForgetPasswordCubit.get(context).focusNode3),
-              ),
-            ),
-            const Gap(10),
-            Expanded(
-              child: OtpTextFromFiled(
-                controller: ForgetPasswordCubit.get(context).otpController3,
-                focusNode: ForgetPasswordCubit.get(context).focusNode3,
-                validator: ForgetPasswordCubit.get(context).numberValidator,
-                onChanged: (p0) => ForgetPasswordCubit.get(context)
-                    .nextFiled(p0, ForgetPasswordCubit.get(context).focusNode4),
-              ),
-            ),
-            const Gap(10),
-            Expanded(
-              child: OtpTextFromFiled(
-                controller: ForgetPasswordCubit.get(context).otpController4,
-                focusNode: ForgetPasswordCubit.get(context).focusNode4,
-                validator: ForgetPasswordCubit.get(context).numberValidator,
-                onChanged: (p0) {
-                  ForgetPasswordCubit.get(context).focusNode4.unfocus();
-                },
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );

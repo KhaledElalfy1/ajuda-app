@@ -3,6 +3,8 @@ import 'package:ajuda/core/database/api/dio_consumer.dart';
 import 'package:ajuda/core/database/cache/cashe_helper.dart';
 import 'package:ajuda/features/auth/data/repo/auth_repo.dart';
 import 'package:ajuda/features/auth/data/repo/auth_repo_impl.dart';
+import 'package:ajuda/features/reset_password/data/repo/forget_password_repo.dart';
+import 'package:ajuda/features/reset_password/data/repo/forget_password_repo_impl.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
@@ -25,6 +27,12 @@ void setup() {
       apiConsumer: getIt<ApiConsumer>(),
     ),
   );
-
-  getIt.registerSingleton<ForgetPasswordCubit>(ForgetPasswordCubit());
+  getIt.registerSingleton<ForgetPasswordRepo>(
+    ForgetPasswordRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerSingleton<ForgetPasswordCubit>(
+    ForgetPasswordCubit(
+      getIt<ForgetPasswordRepo>(),
+    ),
+  );
 }

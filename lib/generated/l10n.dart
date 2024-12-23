@@ -280,10 +280,10 @@ class S {
     );
   }
 
-  /// `Enter your email for the verification process, we will send 4 digits code to your email.`
+  /// `Enter your email for the verification process, we will send 6 digits code to your email.`
   String get enterEmail {
     return Intl.message(
-      'Enter your email for the verification process, we will send 4 digits code to your email.',
+      'Enter your email for the verification process, we will send 6 digits code to your email.',
       name: 'enterEmail',
       desc: '',
       args: [],
@@ -300,10 +300,10 @@ class S {
     );
   }
 
-  /// `Enter 4 digits code that you received on your email.`
+  /// `Enter 6 digits code that you received on your email.`
   String get enterOTP {
     return Intl.message(
-      'Enter 4 digits code that you received on your email.',
+      'Enter 6 digits code that you received on your email.',
       name: 'enterOTP',
       desc: '',
       args: [],

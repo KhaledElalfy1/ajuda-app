@@ -1,9 +1,8 @@
-import 'dart:developer';
 
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/features/reset_password/presentation/view/widgets/forget_password_form.dart';
-import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
+import 'package:ajuda/features/reset_password/presentation/view/widgets/reset_password_bloc_consumer.dart';
 import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -36,25 +35,7 @@ class ResetPasswordView extends StatelessWidget {
                 const Gap(45),
                 const ForgetPasswordForm(),
                 const Gap(75),
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      if (ForgetPasswordCubit.get(context)
-                          .newPasswordFormKey
-                          .currentState!
-                          .validate()) {
-                        log("password is valid");
-                      }
-                    },
-                    child: Text(
-                      'Confirm',
-                      style: AppFonts.semiBold16.copyWith(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
+               const ResetPasswordBlocConsumer(),
               ],
             ),
           ),
@@ -63,3 +44,4 @@ class ResetPasswordView extends StatelessWidget {
     );
   }
 }
+

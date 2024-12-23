@@ -1,8 +1,8 @@
-import 'package:ajuda/core/helpers/extentions.dart';
-import 'package:ajuda/core/routers/routing.dart';
+
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/core/widgets/custom_text_form_filed.dart';
+import 'package:ajuda/features/reset_password/presentation/view/widgets/send_email_bloc_consumer_builder.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
 import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -45,25 +45,7 @@ class EnterEmailView extends StatelessWidget {
                   ),
                 ),
                 const Gap(100),
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      if (ForgetPasswordCubit.get(context)
-                          .emailFormKey
-                          .currentState!
-                          .validate()) {
-                        context.pushNamed(Routing.enterOTP);
-                      }
-                    },
-                    child: Text(
-                      S.of(context).send,
-                      style: AppFonts.semiBold16.copyWith(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
+               const SendEmailBlocConsumerBuilder(),
               ],
             ),
           ),
@@ -72,3 +54,4 @@ class EnterEmailView extends StatelessWidget {
     );
   }
 }
+
