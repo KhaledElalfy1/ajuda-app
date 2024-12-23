@@ -44,3 +44,8 @@ final class ForgetPasswordResetPasswordFailure extends ForgetPasswordState {
 
   ForgetPasswordResetPasswordFailure({required this.eMessage});
 }
+
+
+
+final class ChangePasswordICon extends ForgetPasswordState{}
+final class ChangeRenterPasswordICon extends ForgetPasswordState{}

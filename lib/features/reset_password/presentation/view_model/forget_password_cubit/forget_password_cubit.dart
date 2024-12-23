@@ -20,7 +20,10 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
   GlobalKey<FormState> emailFormKey = GlobalKey<FormState>();
   GlobalKey<FormState> otpFormKey = GlobalKey<FormState>();
   GlobalKey<FormState> newPasswordFormKey = GlobalKey<FormState>();
-
+  bool isNewPasswordObscure = true;
+  bool isRenterPasswordObscure = true;
+  IconData iconPassword = Icons.visibility_off;
+  IconData iconRenterPassword = Icons.visibility_off;
   void sendOTPToEmail() async {
     emit(ForgetPasswordSendOTPLoading());
     final result =
@@ -66,6 +69,20 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
         ForgetPasswordResetPasswordSuccess(sMessage: sMessage),
       ),
     );
+  }
+
+  void changePasswordIcon() {
+    isNewPasswordObscure = !isNewPasswordObscure;
+    iconPassword =
+        isNewPasswordObscure ? Icons.visibility_off : Icons.visibility;
+    emit(ChangePasswordICon());
+  }
+
+  void changeReenterPasswordIcon() {
+    isRenterPasswordObscure = !isRenterPasswordObscure;
+    iconRenterPassword =
+        isRenterPasswordObscure ? Icons.visibility_off : Icons.visibility;
+    emit(ChangeRenterPasswordICon());
   }
 
   void nextFiled(String value, FocusNode focusNode) {
