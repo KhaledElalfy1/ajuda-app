@@ -29,3 +29,18 @@ final class ForgetPasswordCheckOTPFailure extends ForgetPasswordState {
 
   ForgetPasswordCheckOTPFailure({required this.eMessage});
 }
+
+
+final class ForgetPasswordResetPasswordLoading extends ForgetPasswordState {}
+
+final class ForgetPasswordResetPasswordSuccess extends ForgetPasswordState {
+  final String sMessage;
+
+  ForgetPasswordResetPasswordSuccess({required this.sMessage});
+}
+
+final class ForgetPasswordResetPasswordFailure extends ForgetPasswordState {
+  final String eMessage;
+
+  ForgetPasswordResetPasswordFailure({required this.eMessage});
+}

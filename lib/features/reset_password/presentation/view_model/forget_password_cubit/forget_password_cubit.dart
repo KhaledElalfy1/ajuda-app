@@ -64,6 +64,23 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
     );
   }
 
+  void resetPassword() async {
+    emit(ForgetPasswordResetPasswordLoading());
+    final result = await forgetPasswordRepo.resetPassword(
+      email: emailController.text,
+      newPassword: newPasswordController.text,
+      reenterPassword: reenterPasswordController.text,
+    );
+    result.fold(
+      (eMessage) => emit(
+        ForgetPasswordResetPasswordFailure(eMessage: eMessage),
+      ),
+      (sMessage) => emit(
+        ForgetPasswordResetPasswordSuccess(sMessage: sMessage),
+      ),
+    );
+  }
+
   void nextFiled(String value, FocusNode focusNode) {
     if (value.length == 1) {
       focusNode.requestFocus();

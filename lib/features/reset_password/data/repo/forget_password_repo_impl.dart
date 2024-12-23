@@ -26,9 +26,17 @@ class ForgetPasswordRepoImpl extends ForgetPasswordRepo {
   Future<Either<String, String>> resetPassword(
       {required String email,
       required String newPassword,
-      required String reenterPassword}) {
-    // TODO: implement resetPassword
-    throw UnimplementedError();
+      required String reenterPassword}) async {
+    try {
+      Response response = await apiConsumer.post(ApiKeys.resetPassword, body: {
+        'email': email,
+        'newPassword': newPassword,
+        'confirmNewPassword': reenterPassword,
+      });
+      return right('Operation success');
+    } on DioException catch (e) {
+      return left(e.message??"something wrong happen");
+    }
   }
 
   @override

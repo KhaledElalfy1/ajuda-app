@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 
 class CustomAuthLoading extends StatelessWidget {
@@ -12,7 +11,7 @@ class CustomAuthLoading extends StatelessWidget {
     return Center(
       child: LottieBuilder.asset(
         'assets/animation/loading.json',
-        height: 65.h,
+        height: 56,
       ),
     );
   }
