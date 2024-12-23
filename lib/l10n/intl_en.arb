@@ -25,9 +25,9 @@
 
     "restPasswordView":"////////////////////////////////////////////////",
     "resetPassword":"Reset Password",
-    "enterEmail":"Enter your email for the verification process, we will send 4 digits code to your email.",
+    "enterEmail":"Enter your email for the verification process, we will send 6 digits code to your email.",
     "send":"Send",
-    "enterOTP":"Enter 4 digits code that you received on your email.",
+    "enterOTP":"Enter 6 digits code that you received on your email.",
     "confirm":"Confirm",
     "enterYourNewPassword":"Enter your new password",
     "newPassword":"New Password",

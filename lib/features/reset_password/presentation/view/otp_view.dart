@@ -1,9 +1,8 @@
-import 'package:ajuda/core/helpers/extentions.dart';
-import 'package:ajuda/core/routers/routing.dart';
+
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
+import 'package:ajuda/features/reset_password/presentation/view/widgets/check_otp_bloc_consumer.dart';
 import 'package:ajuda/features/reset_password/presentation/view/widgets/otp_digits_section.dart';
-import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_cubit.dart';
 import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -36,25 +35,7 @@ class OtpView extends StatelessWidget {
                 const Gap(45),
                 const OTPDigitsSection(),
                 const Gap(100),
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      if (ForgetPasswordCubit.get(context)
-                          .otpFormKey
-                          .currentState!
-                          .validate()) {
-                        context.pushNamed(Routing.restPassword);
-                      }
-                    },
-                    child: Text(
-                      S.of(context).confirm,
-                      style: AppFonts.semiBold16.copyWith(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
+               const CheckOTPBlocConsumer(),
               ],
             ),
           ),
@@ -63,3 +44,4 @@ class OtpView extends StatelessWidget {
     );
   }
 }
+

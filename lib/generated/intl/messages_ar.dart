@@ -43,9 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "editProfile": MessageLookupByLibrary.simpleMessage("تعديل الحساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "أدخل بريدك الإلكتروني لعملية التحقق ، سنرسل رمزًا مكونًا من 4 أرقام إلى بريدك الإلكتروني."),
+            "أدخل بريدك الإلكتروني لعملية التحقق ، سنرسل رمزًا مكونًا من 6 أرقام إلى بريدك الإلكتروني."),
         "enterOTP": MessageLookupByLibrary.simpleMessage(
-            "أدخل الرمز المكون من 4 أرقام المُرسل على بريدك الإلكتروني."),
+            "أدخل الرمز المكون من 6 أرقام المُرسل على بريدك الإلكتروني."),
         "enterYourNewPassword":
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور الجديدة"),
         "favoriteView": MessageLookupByLibrary.simpleMessage(

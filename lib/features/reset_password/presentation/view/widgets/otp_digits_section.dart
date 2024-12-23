@@ -53,7 +53,29 @@ class OTPDigitsSection extends StatelessWidget {
                 focusNode: ForgetPasswordCubit.get(context).focusNode4,
                 validator: ForgetPasswordCubit.get(context).numberValidator,
                 onChanged: (p0) {
-                  ForgetPasswordCubit.get(context).focusNode4.unfocus();
+                  ForgetPasswordCubit.get(context).nextFiled(p0, ForgetPasswordCubit.get(context).focusNode5);
+                },
+              ),
+            ),
+            const Gap(10),
+            Expanded(
+              child: OtpTextFromFiled(
+                controller: ForgetPasswordCubit.get(context).otpController5,
+                focusNode: ForgetPasswordCubit.get(context).focusNode5,
+                validator: ForgetPasswordCubit.get(context).numberValidator,
+                onChanged: (p0) {
+                  ForgetPasswordCubit.get(context).nextFiled(p0, ForgetPasswordCubit.get(context).focusNode6);
+                },
+              ),
+            ),
+            const Gap(10),
+            Expanded(
+              child: OtpTextFromFiled(
+                controller: ForgetPasswordCubit.get(context).otpController6,
+                focusNode: ForgetPasswordCubit.get(context).focusNode6,
+                validator: ForgetPasswordCubit.get(context).numberValidator,
+                onChanged: (p0) {
+                  ForgetPasswordCubit.get(context).focusNode6.unfocus();
                 },
               ),
             ),

@@ -43,9 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "Enter your email for the verification process, we will send 4 digits code to your email."),
+            "Enter your email for the verification process, we will send 6 digits code to your email."),
         "enterOTP": MessageLookupByLibrary.simpleMessage(
-            "Enter 4 digits code that you received on your email."),
+            "Enter 6 digits code that you received on your email."),
         "enterYourNewPassword":
             MessageLookupByLibrary.simpleMessage("Enter your new password"),
         "favoriteView": MessageLookupByLibrary.simpleMessage(
