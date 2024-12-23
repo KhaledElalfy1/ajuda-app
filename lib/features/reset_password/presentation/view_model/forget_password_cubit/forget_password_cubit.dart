@@ -1,4 +1,5 @@
 import 'package:ajuda/core/helpers/extentions.dart';
+import 'package:ajuda/core/widgets/custom_app_toast.dart';
 import 'package:ajuda/features/reset_password/data/repo/forget_password_repo.dart';
 import 'package:ajuda/features/reset_password/presentation/view_model/forget_password_cubit/forget_password_state.dart';
 import 'package:flutter/material.dart';
@@ -11,19 +12,10 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
   TextEditingController emailController = TextEditingController();
   TextEditingController newPasswordController = TextEditingController();
   TextEditingController reenterPasswordController = TextEditingController();
-  TextEditingController otpController1 = TextEditingController();
-  TextEditingController otpController2 = TextEditingController();
-  TextEditingController otpController3 = TextEditingController();
-  TextEditingController otpController4 = TextEditingController();
-  TextEditingController otpController5 = TextEditingController();
-  TextEditingController otpController6 = TextEditingController();
+  List<TextEditingController> otpControllers =
+      List.generate(6, (_) => TextEditingController());
 
-  FocusNode focusNode1 = FocusNode();
-  FocusNode focusNode2 = FocusNode();
-  FocusNode focusNode3 = FocusNode();
-  FocusNode focusNode4 = FocusNode();
-  FocusNode focusNode5 = FocusNode();
-  FocusNode focusNode6 = FocusNode();
+  List<FocusNode> otpFocusNode = List.generate(6, (_) => FocusNode());
 
   GlobalKey<FormState> emailFormKey = GlobalKey<FormState>();
   GlobalKey<FormState> otpFormKey = GlobalKey<FormState>();
@@ -45,12 +37,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
 
   void checkOTP() async {
     emit(ForgetPasswordCheckOTPLoading());
-    String otp = otpController1.text +
-        otpController2.text +
-        otpController3.text +
-        otpController4.text +
-        otpController5.text +
-        otpController6.text;
+    String otp = otpControllers.map((controller) => controller.text).join();
     final result = await forgetPasswordRepo.checkOTP(
         email: emailController.text, otp: otp);
 
@@ -96,9 +83,19 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
 
   String? numberValidator(String? p1) {
     if (p1 == null || p1.isEmpty) {
-      return 'This field is required';
+      showToast(message: "All Filed IS Require");
+      return '';
     }
     return null;
+  }
+
+  void disposeOTPResources() {
+    for (final controller in otpControllers) {
+      controller.dispose();
+    }
+    for (final focusNode in otpControllers) {
+      focusNode.dispose();
+    }
   }
 
   @override
@@ -106,18 +103,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
     emailController.dispose();
     newPasswordController.dispose();
     reenterPasswordController.dispose();
-    otpController1.dispose();
-    otpController2.dispose();
-    otpController3.dispose();
-    otpController4.dispose();
-    otpController5.dispose();
-    otpController6.dispose();
-    focusNode1.dispose();
-    focusNode2.dispose();
-    focusNode3.dispose();
-    focusNode4.dispose();
-    focusNode5.dispose();
-    focusNode6.dispose();
+    disposeOTPResources();
     return super.close();
   }
 
