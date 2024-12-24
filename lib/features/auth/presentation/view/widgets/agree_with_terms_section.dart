@@ -42,13 +42,16 @@ class AgreeWithTermsSection extends StatelessWidget {
           ' ${S.of(context).and} ',
           style: AppFonts.regular12,
         ),
-        Text(
-          S.of(context).privacyPolicy,
-          style: AppFonts.regular12.copyWith(
-            fontSize: 10,
-            color: AppColors.primaryColor,
-            decoration: TextDecoration.underline,
-            decorationColor: AppColors.primaryColor,
+        Flexible(
+          child: Text(
+            S.of(context).privacyPolicy,
+            overflow: TextOverflow.visible,
+            style: AppFonts.regular12.copyWith(
+              fontSize: 12,
+              color: AppColors.primaryColor,
+              decoration: TextDecoration.underline,
+              decorationColor: AppColors.primaryColor,
+            ),
           ),
         ),
       ],
