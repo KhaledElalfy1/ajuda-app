@@ -1,4 +1,3 @@
-
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/features/reset_password/presentation/view/widgets/check_otp_bloc_consumer.dart';
@@ -35,7 +34,7 @@ class OtpView extends StatelessWidget {
                 const Gap(45),
                 const OTPDigitsSection(),
                 const Gap(100),
-               const CheckOTPBlocConsumer(),
+                const CheckOTPBlocConsumer(),
               ],
             ),
           ),
@@ -44,4 +43,3 @@ class OtpView extends StatelessWidget {
     );
   }
 }
-

@@ -10,35 +10,31 @@ class OTPDigitsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0),
-      child: Form(
-        key: ForgetPasswordCubit.get(context).otpFormKey,
-        child: Row(
-          children: List.generate(
-            6,
-            (index) => Expanded(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5.w),
-                child: OtpTextFromFiled(
-                  autoFocus: index == 0,
-                  validator: ForgetPasswordCubit.get(context).numberValidator,
-                  controller:
-                      ForgetPasswordCubit.get(context).otpControllers[index],
-                  focusNode:
-                      ForgetPasswordCubit.get(context).otpFocusNode[index],
-                  onChanged: (value) {
-                    index == 5
-                        ? ForgetPasswordCubit.get(context)
-                            .otpFocusNode[index]
-                            .unfocus()
-                        : ForgetPasswordCubit.get(context).nextFiled(
-                            value,
-                            ForgetPasswordCubit.get(context)
-                                .otpFocusNode[index + 1],
-                          );
-                  },
-                ),
+    return Form(
+      key: ForgetPasswordCubit.get(context).otpFormKey,
+      child: Row(
+        children: List.generate(
+          6,
+          (index) => Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 5.w),
+              child: OtpTextFromFiled(
+                autoFocus: index == 0,
+                validator: ForgetPasswordCubit.get(context).numberValidator,
+                controller:
+                    ForgetPasswordCubit.get(context).otpControllers[index],
+                focusNode: ForgetPasswordCubit.get(context).otpFocusNode[index],
+                onChanged: (value) {
+                  index == 5
+                      ? ForgetPasswordCubit.get(context)
+                          .otpFocusNode[index]
+                          .unfocus()
+                      : ForgetPasswordCubit.get(context).nextFiled(
+                          value,
+                          ForgetPasswordCubit.get(context)
+                              .otpFocusNode[index + 1],
+                        );
+                },
               ),
             ),
           ),

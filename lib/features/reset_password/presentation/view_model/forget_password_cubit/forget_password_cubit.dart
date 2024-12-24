@@ -110,7 +110,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
     for (final controller in otpControllers) {
       controller.dispose();
     }
-    for (final focusNode in otpControllers) {
+    for (final focusNode in otpFocusNode) {
       focusNode.dispose();
     }
   }

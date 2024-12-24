@@ -1,3 +1,7 @@
+import 'package:ajuda/core/database/cache/cache_keys.dart';
+import 'package:ajuda/core/database/cache/secure_storage.dart';
+import 'package:ajuda/core/helpers/extentions.dart';
+import 'package:ajuda/core/routers/routing.dart';
 import 'package:ajuda/core/utils/app_icons.dart';
 import 'package:ajuda/features/account/presentation/view/widgets/profile_setting_widget.dart';
 import 'package:ajuda/generated/l10n.dart';
@@ -44,7 +48,15 @@ class ProfileInfoSection extends StatelessWidget {
                 ),
                 Gap(10.w),
                 ProfileSettingWidget(
-                  onTap: () {},
+                  onTap: () async {
+                    await SecureStorage.instance
+                        .deleteData(key: CacheKeys.token);
+                    await SecureStorage.instance.deleteData(key: CacheKeys.id);
+                    if (context.mounted) {
+                      context.pushNamedAndRemoveUntil(Routing.login,
+                          predicate: (route) => false);
+                    }
+                  },
                   iconPath: AppIcons.iconsLogOut,
                   title: S.of(context).logOut,
                 ),

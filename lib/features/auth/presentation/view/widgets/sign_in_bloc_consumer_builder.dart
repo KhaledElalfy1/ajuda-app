@@ -7,6 +7,7 @@ import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_st
 import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 class SignInBlocConsumerBuilder extends StatelessWidget {
   const SignInBlocConsumerBuilder({
     super.key,
@@ -19,7 +20,14 @@ class SignInBlocConsumerBuilder extends StatelessWidget {
       child: BlocConsumer<LoginCubit, LoginState>(
         listener: (context, state) {
           if (state is LoginSuccess) {
-            context.pushReplacementNamed(Routing.home);
+            context.pushNamedAndRemoveUntil(Routing.home,
+                predicate: (route) => false);
+          } else if (state is LoginFailure) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(state.message),
+              ),
+            );
           }
         },
         builder: (context, state) {
@@ -30,7 +38,7 @@ class SignInBlocConsumerBuilder extends StatelessWidget {
               }
             },
             child: state is LoginLoading
-                ?const CustomAuthLoading()
+                ? const CustomAuthLoading()
                 : Text(
                     S.of(context).signIn,
                     style: AppFonts.semiBold16.copyWith(

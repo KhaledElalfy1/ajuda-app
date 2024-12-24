@@ -54,7 +54,7 @@ class OnboardingView extends StatelessWidget {
               ),
               const Expanded(child: SizedBox()),
               SizedBox(
-                width: 165.w,
+                // width: 165.w,
                 child: CustomButton(
                   text: S.of(context).startDonating,
                   onPressed: () async {
@@ -71,7 +71,7 @@ class OnboardingView extends StatelessWidget {
                   ),
                 ),
               ),
-              Gap(20.h),
+              Gap(30.h),
             ],
           ),
         ),
