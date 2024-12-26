@@ -26,13 +26,15 @@ class OnboardingView extends StatelessWidget {
             children: [
               Gap(20.h),
               SvgPicture.asset(AppIcons.iconsAppLogo),
-              Gap(110.h),
+              Spacer(
+                flex: 1,
+              ),
               Image.asset(
                 AppImages.imagesOnboarding,
                 width: 327,
                 height: 205,
               ),
-              Gap(50.h),
+              Gap(30.h),
               Align(
                 alignment: AlignmentDirectional.topStart,
                 child: Text(
@@ -52,7 +54,9 @@ class OnboardingView extends StatelessWidget {
                   color: AppColors.black,
                 ),
               ),
-              const Expanded(child: SizedBox()),
+              Spacer(
+                flex: 2,
+              ),
               SizedBox(
                 // width: 165.w,
                 child: CustomButton(
@@ -71,7 +75,7 @@ class OnboardingView extends StatelessWidget {
                   ),
                 ),
               ),
-              Gap(30.h),
+              Gap(20.h),
             ],
           ),
         ),
