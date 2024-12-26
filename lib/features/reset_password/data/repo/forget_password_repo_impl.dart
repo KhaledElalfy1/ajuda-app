@@ -1,5 +1,6 @@
 import 'package:ajuda/core/database/api/api_consumer.dart';
 import 'package:ajuda/core/database/api/api_keys.dart';
+import 'package:ajuda/core/errors/exceptions.dart';
 import 'package:ajuda/features/reset_password/data/repo/forget_password_repo.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
@@ -16,9 +17,10 @@ class ForgetPasswordRepoImpl extends ForgetPasswordRepo {
         'email': email,
         'otp': otp,
       });
-      return right("otp is correct");
-    } on DioException catch (e) {
-      return left(e.message!);
+      String message = response.data['message'];
+      return right(message);
+    } on ServerException catch (e) {
+      return left(e.errorModel.message);
     }
   }
 
@@ -33,9 +35,10 @@ class ForgetPasswordRepoImpl extends ForgetPasswordRepo {
         'newPassword': newPassword,
         'confirmNewPassword': reenterPassword,
       });
-      return right('Operation success');
-    } on DioException catch (e) {
-      return left(e.message??"something wrong happen");
+      String message = response.data['message'];
+      return right(message);
+    } on ServerException catch (e) {
+      return left(e.errorModel.errors![0]);
     }
   }
 
@@ -46,8 +49,8 @@ class ForgetPasswordRepoImpl extends ForgetPasswordRepo {
           .post(ApiKeys.sendOTPToEmail, body: {'email': email});
       String message = response.data['message'];
       return right(message);
-    } on DioException catch (e) {
-      return left(e.message ?? 'some error happen'); // TODO change this
+    } on ServerException catch (e) {
+      return left(e.errorModel.message); 
     }
   }
 }
