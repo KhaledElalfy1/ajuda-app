@@ -20,7 +20,7 @@ class ProfileSettingWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
+        padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 8.h),
         decoration: BoxDecoration(
           border: Border.all(
             color: AppColors.borderColor,
