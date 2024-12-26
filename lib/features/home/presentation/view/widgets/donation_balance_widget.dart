@@ -4,7 +4,6 @@ import 'package:ajuda/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:gap/gap.dart';
 
 class DonationBalanceWidget extends StatelessWidget {
   const DonationBalanceWidget({
@@ -14,7 +13,7 @@ class DonationBalanceWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 15.0.h),
+      padding: EdgeInsets.symmetric(horizontal: 5.0.w, vertical: 15.0.h),
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.r),
@@ -43,7 +42,6 @@ class DonationBalanceWidget extends StatelessWidget {
               height: 35.h,
             ),
           ),
-          Gap(15.w),
           IconButton(
             onPressed: () {},
             icon: SvgPicture.asset(
