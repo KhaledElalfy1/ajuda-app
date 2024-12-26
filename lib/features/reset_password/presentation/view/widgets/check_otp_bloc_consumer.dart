@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:ajuda/core/helpers/extentions.dart';
 import 'package:ajuda/core/routers/routing.dart';
+import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
 import 'package:ajuda/core/widgets/custom_app_toast.dart';
 import 'package:ajuda/core/widgets/custom_auth_loading.dart';
@@ -24,7 +25,7 @@ class CheckOTPBlocConsumer extends StatelessWidget {
           showToast(message: state.sMessage);
           context.pushNamed(Routing.restPassword);
         } else if (state is ForgetPasswordCheckOTPFailure) {
-          showToast(message: state.eMessage);
+          showToast(message: state.eMessage, color: AppColors.red);
           log(state.eMessage);
         }
       },

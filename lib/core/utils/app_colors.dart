@@ -10,4 +10,5 @@ abstract class AppColors {
   static const Color gradientTwo = Color(0xFFFEC739);
   static Color white = Colors.white;
   static Color black = Colors.black;
+  static Color red = Colors.red;
 }

@@ -4,6 +4,7 @@ import 'package:ajuda/core/database/api/api_consumer.dart';
 import 'package:ajuda/core/database/api/api_keys.dart';
 import 'package:ajuda/core/database/cache/cache_keys.dart';
 import 'package:ajuda/core/database/cache/secure_storage.dart';
+import 'package:ajuda/core/errors/exceptions.dart';
 import 'package:ajuda/features/auth/data/repo/auth_repo.dart';
 import 'package:ajuda/features/auth/model/auth_model.dart';
 import 'package:ajuda/features/auth/model/sign_in_user_input_model.dart';
@@ -29,9 +30,9 @@ class AuthRepoImpl extends AuthRepo {
       await SecureStorage.instance
           .addData(key: CacheKeys.id, data: payload['sub']);
       return right(data.userName);
-    } catch (e) {
-      log("error from sign in repo impl is $e");
-      return left(e.toString());
+    } on ServerException catch (e) {
+      log("error from sign in repo impl is ${e.errorModel.message}");
+      return left(e.errorModel.message);
     }
   }
 

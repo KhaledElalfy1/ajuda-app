@@ -1,6 +1,8 @@
 import 'package:ajuda/core/helpers/extentions.dart';
 import 'package:ajuda/core/routers/routing.dart';
+import 'package:ajuda/core/utils/app_colors.dart';
 import 'package:ajuda/core/utils/app_fonts.dart';
+import 'package:ajuda/core/widgets/custom_app_toast.dart';
 import 'package:ajuda/core/widgets/custom_auth_loading.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:ajuda/features/auth/presentation/view_model/login_cubit/login_state.dart';
@@ -23,11 +25,7 @@ class SignInBlocConsumerBuilder extends StatelessWidget {
             context.pushNamedAndRemoveUntil(Routing.home,
                 predicate: (route) => false);
           } else if (state is LoginFailure) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Text(state.message),
-              ),
-            );
+            showToast(message: state.message, color: AppColors.red);
           }
         },
         builder: (context, state) {
