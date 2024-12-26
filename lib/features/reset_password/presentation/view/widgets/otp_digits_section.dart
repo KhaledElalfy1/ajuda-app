@@ -25,6 +25,13 @@ class OTPDigitsSection extends StatelessWidget {
                     ForgetPasswordCubit.get(context).otpControllers[index],
                 focusNode: ForgetPasswordCubit.get(context).otpFocusNode[index],
                 onChanged: (value) {
+                  if (value.isEmpty) {
+                    if (index != 0) {
+                      ForgetPasswordCubit.get(context)
+                          .otpFocusNode[index - 1]
+                          .requestFocus();
+                    }
+                  }
                   index == 5
                       ? ForgetPasswordCubit.get(context)
                           .otpFocusNode[index]

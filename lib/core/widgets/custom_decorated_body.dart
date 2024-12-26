@@ -31,9 +31,9 @@ class CustomDecoratedBody extends StatelessWidget {
           child: headerChild,
         ),
         Positioned(
-          top: 120.h,
+          top: 100.h,
           child: Container(
-            height: MediaQuery.sizeOf(context).height - 120.h,
+            height: MediaQuery.sizeOf(context).height - 100.h,
             width: MediaQuery.sizeOf(context).width,
             decoration: BoxDecoration(
               color: AppColors.white,

@@ -16,7 +16,7 @@ class SavedDonationBody extends StatelessWidget {
         itemCount: 5,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: .5,
+            childAspectRatio: .4,
             crossAxisSpacing: 10,
             mainAxisSpacing: 10),
         itemBuilder: (context, index) => DonationCaseCardItem(
