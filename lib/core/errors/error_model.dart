@@ -1,13 +1,13 @@
 class ErrorModel {
   final String message;
-  final bool isAuthenticated;
+  final int statusCode;
 
-  ErrorModel({required this.message, required this.isAuthenticated});
+  ErrorModel({required this.message, required this.statusCode});
 
   factory ErrorModel.fromJson(Map<String, dynamic> jsonData) {
     return ErrorModel(
       message: jsonData['message'],
-      isAuthenticated: jsonData['isAuthenticated'],
+      statusCode: jsonData['statusCode'],
     );
   }
 }
